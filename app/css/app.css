@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=PT+Sans+Narrow");
 .mb10 {
   margin-bottom: 10px;
 }
@@ -7,40 +8,134 @@
   vertical-align: middle;
 }
 
-.fri-qube-logo {
-  background-image: url('../images/icons-s1778167d02.png');
-  background-position: 0 0;
-  background-repeat: no-repeat;
-  overflow: hidden;
-  display: inline-block;
-  vertical-align: middle;
-  height: 79px;
-  width: 75px;
-}
-@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
-  .fri-qube-logo {
-    background-image: url('../images/icons-2x-sf4ea60d45b.png');
-    background-size: 75px auto;
-    background-position: 0 0;
-    height: 79px;
-    width: 75px;
-  }
+.i-mail-icon {
+  margin: -17px 10px 0 0;
+  width: 35px;
+  height: 35px;
 }
 
 html, body {
   margin: 0;
   height: 100%;
+  font-family: "PT Sans Narrow";
+  line-height: 1.2;
 }
 
-body {
-  box-shadow: inset 0 0 500px;
+.main-wrapper {
+  width: 100%;
+  height: 100%;
 }
 
-.logo {
-  left: 50%;
-  margin-left: -37.5px;
-  margin-top: -39.5px;
-  position: absolute;
-  top: 50%;
-  font-size: 0;
+.header__background {
+  color: #000000;
+  height: 122px;
+  background: #000;
+  display: block;
+}
+
+.header__desktop {
+  max-width: 1000px;
+  margin: 0px auto;
+}
+
+.header-logo__view {
+  display: inline-block;
+  width: 33.33%;
+  float: left;
+  padding-top: 10px;
+  margin: 0px;
+}
+
+.header-logo__title_font {
+  font-size: 34px;
+  font-weight: bolder;
+  color: #FFFFFF;
+}
+
+.header-logo__text_font {
+  font-size: 18px;
+  color: #FFFFFF;
+}
+
+.header-tell-me__view {
+  display: inline-block;
+  float: left;
+  width: 33.33%;
+  text-align: center;
+  margin: 0px;
+}
+
+.button__call-me {
+  font-family: "PT Sans Narrow";
+  background: #FF3954;
+  border-radius: 10px;
+  border-color: transparent;
+  width: 200px;
+  color: #FFFFFF;
+  font-size: 26px;
+  font-weight: bolder;
+  margin-top: 30px;
+  cursor: pointer;
+}
+.button__call-me:hover {
+  background: #FF1132;
+}
+
+.header-tell-me__corporate-clients {
+  display: block;
+  color: #FFFFFF;
+  text-decoration: underline;
+  font-size: 17px;
+  cursor: pointer;
+  text-align: center;
+}
+.header-tell-me__corporate-clients:hover {
+  color: #1f4d8d;
+}
+
+.header-contacts__contacts-info {
+  float: right;
+  padding-top: 10px;
+  width: 33.33%;
+  text-align: right;
+}
+
+.header-contacts__phone {
+  display: inline-block;
+  font-size: 37px;
+  font-weight: 900;
+}
+
+.header-contacts_font-white {
+  color: #FFFFFF;
+}
+
+.header-contacts__text {
+  padding-top: 10px;
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  .header-logo__title_font {
+    font-size: 24px;
+  }
+
+  .header-logo__text_font {
+    font-size: 16px;
+  }
+
+  .button__call-me {
+    width: 180px;
+    font-size: 24px;
+  }
+
+  .header-contacts__phone {
+    font-size: 24px;
+  }
+
+  .i-mail-icon {
+    margin: -7px 10px 0 0;
+    width: 25px;
+    height: 25px;
+  }
 }
