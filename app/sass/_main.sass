@@ -1,92 +1,180 @@
 html, body
   margin: 0
   height: 100%
-  font-family: 'PT Sans Narrow'
-  line-height: 1.2
+  font-family: 'PT Sans Narrow', Arial
 
-.main-wrapper
+.clearfix
+  &:after
+    content: ''
+    display: block
+    clear: both
+
+.container
+  max-width: 1000px
   min-width: 320px
+  margin: 0 auto
+  padding: 0 15px 0 15px
 
-.header__background
-  color: #000000
-  height: 122px
-  background: #000
+.header
+  background: url('/images/background/big_pattern.png') repeat center
+
+.header__container
+  padding: 15px 0
+
+.header-grid
+  display: flex
+  align-items: flex-start
+
+.header-grid__item
+  width: 33.33%
+
+.logo
+  color: #fff
+  text-decoration: none
+
+.logo__title
+  font-size: 34px
+  font-weight: bold
+
+.logo__description
+  font-size: 18px
   display: block
 
-.header__desktop
-  max-width: 1000px
-  margin: 0px auto
-
-.header-logo__view
-  display: inline-block
-  width: 33.33%
-  float: left
-  padding-top: 10px
-  margin: 0px
-
-.header-logo__title_font
-  font-size: 34px
-  font-weight: bolder
-  color: #FFFFFF
-
-.header-logo__text_font
-  font-size: 18px
-  color: #FFFFFF
-
-.header-tell-me__view
-  display: inline-block
-  float: left
-  width: 33.33%
+.callback
   text-align: center
-  margin: 0px
+  width: 100%
+  height: 100%
+  padding-top: 20px
 
-.button__call-me
-  font-family: 'PT Sans Narrow'
+.button-red
+  text-decoration: none
   background: #FF3954
   border-radius: 10px
   border-color: transparent
-  width: 200px
   color: #FFFFFF
   font-size: 26px
-  font-weight: bolder
-  margin-top: 30px
+  font-weight: bold
   cursor: pointer
+  padding: 5px 5px 5px 5px
+  margin: 0 auto
   &:hover
     background: #FF1132
-  
-.header-tell-me__corporate-clients
+
+.callback__link
   display: block
   color: #FFFFFF
-  text-decoration: underline
-  font-size: 17px
+  font-size: large
   cursor: pointer
+  margin-top: 10px
+  padding: 5px 5px 5px 5px
   text-align: center
   &:hover
     color: #1f4d8d
 
-.header-contacts__contacts-info
+.header-contacts
   float: right
-  padding-top: 10px
-  width: 33.33%
-  text-align: right
 
 .header-contacts__phone
-  display: inline-block
-  font-size: 37px
-  font-weight: 900
+  float: right
 
-.header-contacts_font-white
+.header-contacts__phone-link
   color: #FFFFFF
+  text-decoration: none
 
-.header-contacts__text
-  padding-top: 10px
-  display: block
-
-
-
-
-///
+.header-contacts__work-schedule
+  color: #FFFFFF
+  text-align: right
 
 .header-contacts__phone-number
   display: inline-block
   vertical-align: middle
+  font-size: 37px
+  font-weight: 900
+
+.header-contacts__day-and-night
+  display: block
+  float: right
+  font-size: 18px
+
+.header-contacts__courier
+  display: block
+  float: right
+
+.content__title-sell
+  color: #007879
+  font-size: 60px
+  line-height: 1em
+  text-align: center
+  font-weight: bold
+  margin: 0
+
+.content__title-valuation
+  color: #20B7BE
+  font-size: 55px
+  line-height: 1em
+  text-align: center
+  font-weight: bold
+  margin: 0 0 20px 0
+  
+.content__background
+  background: url("/images/background/banner.jpg") center no-repeat
+  box-shadow: 0px 0px 10px #000000
+  position: relative
+  z-index: 999
+
+.content-wrapper
+  text-align: center
+
+.valuation-form
+  display: inline-block
+  max-width: 300px
+  min-height: 380px
+  border: 3px solid #0B99A3
+  margin-bottom: 50px
+  
+.valuation-title
+  color: #034043
+  font-size: 36px
+  font-weight: bold
+  line-height: 1
+
+.valuation-phone
+  display: inline-block
+  margin: 0 auto
+  width: 260px
+  &:hover
+    border: 1px solid red
+
+.valuation-textarea
+  max-width: 260px
+
+.valuation-textarea
+  font-family: 'PT Sans Narrow', arial
+  width: 260px
+  height: 115px
+
+.valuation-button
+  display: inline-block
+  width: 260px
+  margin-top: 20px
+  font-size: 26px
+
+.content__background_texture
+  background: url("/images/background/bg.jpg") repeat
+
+.content__title-why-we
+  font-size: 36px
+  font-weight: bold
+  padding: 20px 0 20px 0
+
+.why-we__item
+  width: 100%
+  text-align: left
+  padding: 10px 0 10px 0
+
+.why-we__title
+  display: inline-block
+  vertical-align: top
+
+.why-we__description
+  display: inline-block
