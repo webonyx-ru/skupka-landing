@@ -3,43 +3,104 @@
 {% block pageTitle %}Главная страница{% endblock %}
 
 {% block content %}
-    <div class="content__background">
-        <div class="container">
-            <div class="content-wrapper">
-                <h1 class="content__title-sell">Хотите продать ноутбук или компьютер?</h1>
-                <h2 class="content__title-valuation">Оценим и купим в любом состоянии!</h2>
-                <form action="" class="valuation-form">
-                    <div class="valuation-title">
-                        <p>Онлайн оценка<br>за 15 минут</p>
+    <div class="feedback feedback__background">
+        <div class="container container_text-center">
+            <h1 class="feedback__title">Хотите продать ноутбук или компьютер?</h1>
+            <h2 class="feedback__subtitle">Оценим и купим в любом состоянии!</h2>
+            <form action="" class="feedback-form">
+                <div class="feedback-form__title"><p>Онлайн оценка<br>за 15 минут</p></div>
+                <input class="feedback-form__input" type="text" placeholder="8(___)___-__-__" pattern="8\([0-9]{3}\)[0-9]{3}-[0-9]{2}-[0-9]{2}">
+                <textarea class="feedback-form__textarea" name="" id="" cols="30" rows="10" placeholder="Модель, характеристики, состояние..."></textarea>
+                <a href="" class="button button-red feedback-form__button">Оценить сейчас</a>
+            </form>
+        </div>
+    </div>
+
+    <div class="content content__background">
+        <div class="container clearfix">
+            <div class="content__title">
+                Почему выбирают нас
+            </div>
+            <div class="why-we">
+                <div class="why-we-item why-we__item clearfix">
+                    <div class="why-we-item__icon">
+                        <i class="fri fri-fast-icon"></i>
                     </div>
-                    <input type="text" placeholder="8(___)___-__-__" pattern="8\([0-9]{3}\)[0-9]{3}-[0-9]{2}-[0-9]{2}" class="valuation-phone">
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Модель, характеристики, состояние..." class="valuation-textarea"></textarea>
-                    <a href="" class="button button-red valuation-button">Оценить сейчас</a>
-                </form>
+                    <div class="why-we-item__text">
+                        <h3 class="why-we-item__title">Продать нам быстро и выгодно!</h3>
+                        <div class="why-we-item__description">Курьер приедет бесплатно в любое время суток, оценит ваше устройство и выдаст деньги СРАЗУ! Также Вы можете воспользоваться формой онлайн-оценки и заранее узнать стоимость своего ноутбука.</div>
+                    </div>
+                </div>
+                <div class="why-we-item why-we__item clearfix">
+                    <div class="why-we-item__icon">
+                        <i class="fri fri-profit-icon"></i>
+                    </div>
+                    <div class="why-we-item__text">
+                        <h3 class="why-we-item__title">Продать нам быстро и выгодно!</h3>
+                        <div class="why-we-item__description">Продавать технику самостоятельно долго, зачастую это занимает больше месяца и не оправдывает Ваших финансовых ожиданий. Позвоните - и Вы получите желаемую сумму в течение часа с момента обращения!</div>
+                    </div>
+                </div>
+                <div class="why-we-item why-we__item clearfix">
+                    <div class="why-we-item__icon">
+                        <i class="fri fri-fair-icon"></i>
+                    </div>
+                    <div class="why-we-item__text">
+                        <h3 class="why-we-item__title">Честная оценка техники. Честный сервис, максимальная оценка!</h3>
+                        <div class="why-we-item__description">Мы готовы предложить Вам 90% от рыночной стоимости. Мы НЕ «впариваем» Вам Б/У ноутбуки взамен ваших и не предлагаем обмен. Только наличные! Мы НЕ обманываем Вас завышенной оценкой, как это делают конкуренты, чтобы заманить Вас в офис!</div>
+                    </div>
+                </div>
+            </div>
+            <div class="content__title">
+                Продать нам выгодней
+            </div>
+            <div class="content__text">
+                <p>Не знаете куда продать ноутбук в Москве? Мы выкупим ваш ноутбук по самой выгодной цене!</p>
+                <p>Если у Вас морально устаревший ноутбук или планшет который никому уже не нужен и который никто не купит даже за сто рублей — продайте его нам, мы постараемся дать за него максимальную сумму.</p>
+                <p>Если Вам срочно нужны деньги и вы хотите продать современную игровую или бизнес модель, Вы можете сдать свой ноутбук в нашу скупку с минимальной потерей в цене!</p>
+                <p>В целом стоимость ноутбука зависит от множества факторов: год выпуска,  «начинка», состояние. Но будьте уверены наши специалисты честно оценят ваше устройство и предложат до 100 т. р. наличными за самые навороченные модели.</p>
+            </div>
+            <div class="content__title">
+                Схему проезда вы можете увидеть ниже
+            </div>
+            <div class="content-map">
+                <iframe class="content-map__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2246.376445312138!2d37.563575316185776!3d55.734587980548525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54bbdf5838719%3A0x96a1ef43119d5a59!2z0KHQsNCy0LLQuNC90YHQutCw0Y8g0L3QsNCxLiwgMTcsINCc0L7RgdC60LLQsCwg0KDQvtGB0YHQuNGPLCAxMTk0MzU!5e0!3m2!1sru!2skz!4v1486546824858" width="480" height="340" frameborder="0" style="border:0" allowfullscreen></iframe>
+                <div class="content-map__text">
+                    <span class="content-map__description_red">В связи с переездом, подъехать к нам в офис Вы можете только по предварительному звонку!</span>
+                    <span class="content-map__description">Мы рекомендуем Вам воспользоваться бесплатной услугой вызова курьера!</span>
+                    <a href="" class="button button-red content__button">Вызвать курьера</a>
+                    <span class="content-map__call-us">А также Вы можете позвонить нам круглосуточно:</span>
+                    <a class="content-map__phone" href="tel:84952667754">8 (495)266-77-54</a>
+                </div>
             </div>
         </div>
     </div>
-    <div class="content__background_texture">
-        <div class="container clearfix">
-            <div class="content-wrapper">
-                <div class="content">
-                    <div class="content__title-why-we">
-                        Почему выбирают нас
+    <div class="header header__background">
+        <div class="header__container container">
+            <div class="header-grid">
+                <div class="header-grid__item">
+                    <a href="#" class="logo">
+                        <span class="logo__title">ООО «Скупка Ноутбуков»</span>
+                        <span class="logo__description">Оценка и скупка любых ноутбуков, планшетов, моноблоков в Москве и Московской области</span>
+                    </a>
+                </div>
+                <div class="header-grid__item">
+                    <div class="callback">
+                        <a href="#" class="button button-red callback__button">Перезвоните мне</a>
+                        <a href="#" class="callback__link">Корпоративным клиентам</a>
                     </div>
-                    <div class="why-we__item">
-                        <i class="fri fri-fast-icon"></i>
-                        <span class="why-we__title">Продать нам быстро и выгодно!</span>
-                        <span class="why-we__description">Курьер приедет бесплатно в любое время суток, оценит ваше устройство и выдаст деньги СРАЗУ! Также Вы можете воспользоваться формой онлайн-оценки и заранее узнать стоимость своего ноутбука.</span>
-                    </div>
-                    <div class="why-we__item">
-                        <i class="fri fri-profit-icon"></i>
-                        <span class="why-we__title">Продать нам быстро и выгодно!</span>
-                        <span class="why-we__description">Продавать технику самостоятельно долго, зачастую это занимает больше месяца и не оправдывает Ваших финансовых ожиданий. Позвоните - и Вы получите желаемую сумму в течение часа с момента обращения!</span>
-                    </div>
-                    <div class="why-we__item">
-                        <i class="fri fri-fair-icon"></i>
-                        <span class="why-we__title">Честная оценка техники. Честный сервис, максимальная оценка!</span>
-                        <span class="why-we__description">Мы готовы предложить Вам 90% от рыночной стоимости. Мы НЕ «впариваем» Вам Б/У ноутбуки взамен ваших и не предлагаем обмен. Только наличные! Мы НЕ обманываем Вас завышенной оценкой, как это делают конкуренты, чтобы заманить Вас в офис!</span>
+                </div>
+                <div class="header-grid__item">
+                    <div class="header-contacts">
+                        <div class="header-contacts__phone">
+                            <a class="header-contacts__phone-link" href="tel:84952667755">
+                                <i class="fri-mail-icon"></i>
+                                <div class="header-contacts__phone-number">8(495)266-77-55</div>
+                            </a>
+                        </div>
+                        <div class="header-contacts__work-schedule">
+                            <span class="header-contacts__day-and-night">Круглосуточно без выходных!</span>
+                            <span class="header-contacts__courier">Бесплатный курьер по Москве и МО!</span>
+                        </div>
                     </div>
                 </div>
             </div>
