@@ -14,7 +14,7 @@
 
         _self.maskInit(".js-input-mask");
 
-        _self.modalShow();
+        _self.modal();
     };
 
     // Window load types (loading, dom, full)
@@ -219,35 +219,79 @@
     YOURAPPNAME.prototype.maskInit = function (className) {
         $(className).mask("+7 (999) 999-99-99");
     };
-    
-    YOURAPPNAME.prototype.modalShow = function () {
-        var classPopup = document.querySelector(".popup");
 
-        $('.popup__overlay').click(function() {
-            classPopup.classList.remove('opened');
-        })
+    YOURAPPNAME.prototype.modal = function () {
+        var _self = this;
 
-        $('.popup__close').click(function() {
-            classPopup.classList.remove('opened');
-        })
+        var modal = {};
 
-        $('.callback__button').click(function() {
-            classPopup.classList.add('opened');
-        })
+        modal.init = function () {
+            var popupOverlays = _self.doc.querySelectorAll('.popup__overlay');
 
+            for (var i = 0; i < popupOverlays.length; i++) {
+                popupOverlays[i].addEventListener('click', function (e) {
+                    if(e.target.classList.contains('popup__overlay')) {
+                        modal.closeModal();
+                    }
+                });
+            }
 
+            var closeButtons = _self.doc.querySelectorAll('.js-close-popup');
 
-    }
+            for (var i = 0; i < closeButtons.length; i++) {
+                closeButtons[i].addEventListener('click', function (e) {
+                    var popupName = this.closest('.popup').getAttribute('data-popup');
+
+                    modal.closeModal(popupName);
+                });
+            }
+
+            var openPopupsBtns = _self.doc.querySelectorAll('.js-open-popup');
+
+            for (var i = 0; i < openPopupsBtns.length; i++) {
+                openPopupsBtns[i].addEventListener('click', function (e) {
+                    var popupName = this.getAttribute('data-popup-name');
+
+                    modal.openModal(popupName);
+                });
+            }
+        };
+
+        modal.openModal = function (popupName) {
+            _self.doc.querySelector('.popup__overlay').classList.add('opened');
+            var popup = _self.doc.querySelector('[data-popup="'+popupName+'"]');
+
+            popup.classList.add('opened');
+        };
+
+        modal.closeModal = function (popupName) {
+            _self.doc.querySelector('.popup__overlay').classList.remove('opened');
+            if(popupName) {
+                var popup = _self.doc.querySelector('[data-popup="'+popupName+'"]');
+                popup.classList.remove('opened');
+            } else {
+                var popups = _self.doc.querySelectorAll('[data-popup]');
+
+                for(var i = 0; i < popups.length; i++) {
+                    popups[i].classList.remove('opened');
+                }
+            }
+        };
+
+        modal.init();
+
+        return modal;
+    };
 
     var app = new YOURAPPNAME(document);
 
     app.appLoad('loading', function () {
-        console.log('App is loading... Paste your app code here.');
+        // console.log('App is loading... Paste your app code here.');
         // App is loading... Paste your app code here. 4example u can run preloader event here and stop it in action appLoad dom or full
     });
 
     app.appLoad('dom', function () {
-        console.log('DOM is loaded! Paste your app code here (Pure JS code).');
+        // console.log('DOM is loaded! Paste your app code here (Pure JS code).');
         // DOM is loaded! Paste your app code here (Pure JS code).
         // Do not use jQuery here cause external libs do not loads here...
 
@@ -255,7 +299,7 @@
     });
 
     app.appLoad('full', function (e) {
-        console.log('App was fully load! Paste external app source code here... For example if your use jQuery and something else');
+        // console.log('App was fully load! Paste external app source code here... For example if your use jQuery and something else');
         // App was fully load! Paste external app source code here... 4example if your use jQuery and something else
         // Please do not use jQuery ready state function to avoid mass calling document event trigger!
     });

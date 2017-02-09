@@ -1,279 +1,297 @@
+@import "mixins/mixins"
+
 html, body
-  margin: 0
-  height: 100%
-  font-family: 'PT Sans Narrow', Arial
+    margin: 0
+    height: 100%
+    font-family: 'PT Sans Narrow', Arial
 
 .clearfix
-  &:after
-    content: ''
-    display: block
-    clear: both
+    &:after
+        content: ''
+        display: block
+        clear: both
 
 .container
-  max-width: 1000px
-  min-width: 320px
-  margin: 0 auto
-  padding: 0 15px 0 15px
+    max-width: 1000px
+    min-width: 320px
+    margin: 0 auto
+    padding: 0 15px 0 15px
 
 .container_text-center
-  text-align: center
+    text-align: center
 
 .header
-  background: url('/images/background/big_pattern.png') repeat center
+    background: url('/images/background/big_pattern.png') repeat center
 
 .header-grid
-  display: flex
-  align-items: flex-start
+    display: flex
+    align-items: flex-start
 
 .header-grid__item
-  width: 33.33%
+    width: 33.33%
 
 .logo
-  color: #fff
-  text-decoration: none
+    color: #fff
+    text-decoration: none
 
 .logo__title
-  font-size: 34px
-  font-weight: bold
+    font-size: 34px
+    font-weight: bold
 
 .logo__description
-  font-size: 18px
-  display: block
+    font-size: 18px
+    display: block
 
 .callback
-  text-align: center
-  width: 100%
-  height: 100%
-  padding-top: 20px
+    text-align: center
+    width: 100%
+    height: 100%
+    padding-top: 20px
 
 .button-red
-  text-decoration: none
-  background: #FF3954
-  border-radius: 10px
-  border-color: transparent
-  color: #FFFFFF
-  font-size: 26px
-  font-weight: bold
-  cursor: pointer
-  padding: 5px 5px 5px 5px
-  &:hover
-    background: #FF1132
+    text-decoration: none
+    background: #FF3954
+    border-radius: 10px
+    border-color: transparent
+    color: #FFFFFF
+    font-size: 26px
+    font-weight: bold
+    cursor: pointer
+    padding: 5px 5px 5px 5px
+    &:hover
+        background: #FF1132
 
 .callback__link
-  display: block
-  color: #FFFFFF
-  font-size: large
-  cursor: pointer
-  margin-top: 10px
+    display: block
+    color: #FFFFFF
+    font-size: large
+    cursor: pointer
+    margin-top: 10px
 
-  &:hover
-    color: #1f4d8d
+    &:hover
+        color: #1f4d8d
 
 .header-contacts
-  float: right
+    float: right
 
 .header-contacts__phone
-  float: right
+    float: right
 
 .header-contacts__phone-link
-  color: #FFFFFF
-  text-decoration: none
+    color: #FFFFFF
+    text-decoration: none
 
 .header-contacts__work-schedule
-  color: #FFFFFF
-  text-align: right
+    color: #FFFFFF
+    text-align: right
 
 .header-contacts__phone-number
-  display: inline-block
-  vertical-align: middle
-  font-size: 37px
-  font-weight: 900
+    display: inline-block
+    vertical-align: middle
+    font-size: 37px
+    font-weight: 900
 
 .header-contacts__day-and-night
-  display: block
-  float: right
-  font-size: 18px
+    display: block
+    float: right
+    font-size: 18px
 
 .header-contacts__courier
-  display: block
-  float: right
-  font-size: 18px
+    display: block
+    float: right
+    font-size: 18px
 
 .feedback__title
-  color: #007879
-  font-size: 60px
-  line-height: 1em
-  text-align: center
-  font-weight: bold
-  margin: 0
+    color: #007879
+    font-size: 60px
+    line-height: 1em
+    text-align: center
+    font-weight: bold
+    margin: 0
 
 .feedback__subtitle
-  color: #20B7BE
-  font-size: 55px
-  line-height: 1em
-  text-align: center
-  font-weight: bold
-  margin: 0 0 20px 0
-  
+    color: #20B7BE
+    font-size: 55px
+    line-height: 1em
+    text-align: center
+    font-weight: bold
+    margin: 0 0 20px 0
+
 .feedback__background
-  background: url("/images/background/banner.jpg") center no-repeat
-  box-shadow: 0px 0px 10px #000000
-  position: relative
-  background-position-y: 150px
+    background: url("/images/background/banner.jpg") center no-repeat
+    box-shadow: 0px 0px 10px #000000
+    position: relative
+    background-position-y: 150px
 
 .feedback-form
-  display: inline-block
-  max-width: 300px
-  min-height: 380px
-  border: 3px solid #0B99A3
-  margin-bottom: 50px
-  text-align: center
-  
+    display: inline-block
+    max-width: 300px
+    min-height: 380px
+    border: 3px solid #0B99A3
+    margin-bottom: 50px
+    text-align: center
+
 .feedback-form__title
-  color: #034043
-  font-size: 36px
-  font-weight: bold
-  line-height: 1
+    color: #034043
+    font-size: 36px
+    font-weight: bold
+    line-height: 1
 
 .feedback-form__input
-  display: inline-block
-  margin-bottom: 5px
-  width: 260px
-  &:hover
-    box-shadow: 0 0 2px 1px red
+    display: inline-block
+    margin-bottom: 5px
+    width: 260px
+    &:hover
+        box-shadow: 0 0 2px 1px red
 
 .feedback-form__textarea
-  font-family: 'PT Sans Narrow', arial
-  width: 260px
-  height: 115px
+    font-family: 'PT Sans Narrow', arial
+    width: 260px
+    height: 115px
 
 .feedback-form__button
-  display: inline-block
-  width: 260px
-  margin-top: 20px
-  font-size: 26px
+    display: inline-block
+    width: 260px
+    margin-top: 20px
+    font-size: 26px
 
 .content__background
-  background: url("/images/background/bg.jpg") repeat
+    background: url("/images/background/bg.jpg") repeat
 
 .content__title
-  text-align: center
-  font-size: 36px
-  font-weight: bold
-  padding: 20px 0 20px 0
-  overflow: hidden
-  &:after
-    width: 100%
-    content: ''
-    border-bottom: 3px solid #000
-    vertical-align: middle
-    display: inline-block
-    margin-right: -100%
-  &:before
-    width: 100%
-    content: ''
-    border-bottom: 3px solid #000
-    vertical-align: middle
-    display: inline-block
-    margin-left: -100%
+    text-align: center
+    font-size: 36px
+    font-weight: bold
+    padding: 20px 0 20px 0
+    overflow: hidden
+    &:after
+        width: 100%
+        content: ''
+        border-bottom: 3px solid #000
+        vertical-align: middle
+        display: inline-block
+        margin-right: -100%
+    &:before
+        width: 100%
+        content: ''
+        border-bottom: 3px solid #000
+        vertical-align: middle
+        display: inline-block
+        margin-left: -100%
 
 .why-we__item
-  width: 100%
-  text-align: left
-  padding: 10px 0 10px 0
+    width: 100%
+    text-align: left
+    padding: 10px 0 10px 0
 
 .why-we-item__icon
-  display: inline-block
-  width: 10%
+    display: inline-block
+    width: 10%
 
 .why-we-item__text
-  display: inline-block
-  width: 86%
-  min-width: 320px
-  vertical-align: middle
-  padding: 0 15px 15px 15px
+    display: inline-block
+    width: 86%
+    min-width: 320px
+    vertical-align: middle
+    padding: 0 15px 15px 15px
 
 .content__text
-  display: inline-block
-  padding: 0 15px 15px 15px
-  font-size: 26px
-  
+    display: inline-block
+    padding: 0 15px 15px 15px
+    font-size: 26px
+
 .why-we-item__title
-  display: inline-block
-  font-size: 34px
-  margin: 0
-  
+    display: inline-block
+    font-size: 34px
+    margin: 0
+
 .why-we-item__description
-  display: inline-block
-  font-size: 22px
+    display: inline-block
+    font-size: 22px
 
 .content-map__map
-  width: 480px
-  margin: 0 15px 0 15px
-  display: inline-block
-  float: left
+    width: 480px
+    margin: 0 15px 0 15px
+    display: inline-block
+    float: left
 
 .content-map__text
-  width: 490px
-  float: left
-  font-size: 24px
+    width: 490px
+    float: left
+    font-size: 24px
 
 .content-map__description_red
-  display: block
-  color: #ff1132
-  font-weight: 900
+    display: block
+    color: #ff1132
+    font-weight: 900
 
 .content-map__description
-  display: block
+    display: block
 
 .content__button
-  display: block
-  width: 200px
-  text-align: center
-  margin: 15px 0 15px 0
+    display: block
+    width: 200px
+    text-align: center
+    margin: 15px 0 15px 0
 
 .content-map__call-us
-  display: block
+    display: block
 
 .content-map__phone
-  display: block
-  font-weight: 900
-  text-decoration: none
-  color: #000000
-  font-size: 32px
+    display: block
+    font-weight: 900
+    text-decoration: none
+    color: #000000
+    font-size: 32px
+
+.popup
+    visibility: hidden
+    opacity: 0
+    transition: all 0.5s ease
+    position: absolute
+    margin-top: -100px
+    top: 50%
+    left: 50%
+    transform: translate3d(-50%,-50%,0)
+
+    &.opened
+        visibility: visible
+        opacity: 1
+        margin-top: 0
 
 .popup__overlay
-  display: flex
+    display: flex
+    align-items: center
+    position: fixed
+    justify-content: center
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    text-align: center
+    -webkit-transition: all 0.6s ease 0s
+    -moz-transition: all 0.6s ease 0s
+    -ms-transition: all 0.6s ease 0s
+    -o-transition: all 0.6s ease 0s
+    transition: all 0.6s ease 0s
+    background-color: rgba(0, 0, 0, 0.6)
+    opacity: 0
+    visibility: hidden
 
-  position: fixed
-  left: 0
-  top: 0
-  width: 100%
-  height: 100%
-  text-align: center
-  -webkit-transition: all 0.6s ease 0s
-  -moz-transition: all 0.6s ease 0s
-  -ms-transition: all 0.6s ease 0s
-  -o-transition: all 0.6s ease 0s
-  transition: all 0.6s ease 0s
-  background-color: rgba(0, 0, 0, 0.6)
-  opacity: 0
-  visibility: hidden
-
-  &.opened
-    opacity: 1
-    visibility: visible
+    &.opened
+        opacity: 1
+        visibility: visible
 
 .popup-wrapper
-  display: inline-block
-  position: relative
-  max-width: 80%
-  padding: 20px
-  background: #fff
-  vertical-align: middle
+    display: inline-block
+    position: relative
+    max-width: 80%
+    padding: 20px
+    background: #fff
+    vertical-align: middle
 
 .popup-form__row
-  margin: 1em 0
+    margin: 1em 0
 
 .hidden
-  visibility: hidden
+    visibility: hidden
