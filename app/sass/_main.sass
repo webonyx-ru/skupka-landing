@@ -21,9 +21,6 @@ html, body
 .header
   background: url('/images/background/big_pattern.png') repeat center
 
-.header__container
-  padding: 15px 0
-
 .header-grid
   display: flex
   align-items: flex-start
@@ -244,3 +241,39 @@ html, body
   text-decoration: none
   color: #000000
   font-size: 32px
+
+.popup__overlay
+  display: flex
+
+  position: fixed
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  text-align: center
+  -webkit-transition: all 0.6s ease 0s
+  -moz-transition: all 0.6s ease 0s
+  -ms-transition: all 0.6s ease 0s
+  -o-transition: all 0.6s ease 0s
+  transition: all 0.6s ease 0s
+  background-color: rgba(0, 0, 0, 0.6)
+  opacity: 0
+  visibility: hidden
+
+  &.opened
+    opacity: 1
+    visibility: visible
+
+.popup-wrapper
+  display: inline-block
+  position: relative
+  max-width: 80%
+  padding: 20px
+  background: #fff
+  vertical-align: middle
+
+.popup-form__row
+  margin: 1em 0
+
+.hidden
+  visibility: hidden

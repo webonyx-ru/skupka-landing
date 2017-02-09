@@ -13,6 +13,8 @@
         var _self = this;
 
         _self.maskInit(".js-input-mask");
+
+        _self.modalShow();
     };
 
     // Window load types (loading, dom, full)
@@ -214,9 +216,28 @@
         return plugin;
     };
 
-    YOURAPPNAME.prototype.maskInit = function (ClassName) {
+    YOURAPPNAME.prototype.maskInit = function (className) {
         $(className).mask("+7 (999) 999-99-99");
     };
+    
+    YOURAPPNAME.prototype.modalShow = function () {
+        var classPopup = document.querySelector(".popup");
+
+        $('.popup__overlay').click(function() {
+            classPopup.classList.remove('opened');
+        })
+
+        $('.popup__close').click(function() {
+            classPopup.classList.remove('opened');
+        })
+
+        $('.callback__button').click(function() {
+            classPopup.classList.add('opened');
+        })
+
+
+
+    }
 
     var app = new YOURAPPNAME(document);
 

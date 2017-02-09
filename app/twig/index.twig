@@ -3,13 +3,14 @@
 {% block pageTitle %}Главная страница{% endblock %}
 
 {% block content %}
+
     <div class="feedback feedback__background">
         <div class="container container_text-center">
             <h1 class="feedback__title">Хотите продать ноутбук или компьютер?</h1>
             <h2 class="feedback__subtitle">Оценим и купим в любом состоянии!</h2>
             <form action="" class="feedback-form">
                 <div class="feedback-form__title"><p>Онлайн оценка<br>за 15 минут</p></div>
-                <input class="js-input-mask feedback-form__input" type="text">
+                <input class="js-input-mask feedback-form__input" type="text" placeholder="+7 (___) ___-__-__">
                 <textarea class="feedback-form__textarea" name="" id="" cols="30" rows="10" placeholder="Модель, характеристики, состояние..."></textarea>
                 <a href="" class="button button-red feedback-form__button">Оценить сейчас</a>
             </form>
@@ -104,6 +105,13 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="popup__overlay"></div>
+    <div class="popup ">
+        <div class="popup-wrapper">
+            Тут рандомный текст
+            <a href="#" class="popup__close">Закрыть</a>
         </div>
     </div>
 {% endblock %}
