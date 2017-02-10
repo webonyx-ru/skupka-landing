@@ -3,60 +3,62 @@
 {% block pageTitle %}Главная страница{% endblock %}
 
 {% block content %}
-
-    <div class="feedback feedback__background">
-        <div class="container container_text-center">
-            <h1 class="feedback__title">Хотите продать ноутбук или компьютер?</h1>
-            <h2 class="feedback__subtitle">Оценим и купим в любом состоянии!</h2>
-            <form action="" class="feedback-form">
-                <div class="feedback-form__title"><p>Онлайн оценка<br>за 15 минут</p></div>
-                <input class="js-input-mask feedback-form__input" type="text" placeholder="+7 (___) ___-__-__">
-                <textarea class="feedback-form__textarea" name="" id="" cols="30" rows="10"
-                          placeholder="Модель, характеристики, состояние..."></textarea>
-                <a href="" class="button button-red feedback-form__button">Оценить сейчас</a>
-            </form>
+    <div class="container">
+        <div class="container_1200px">
+            <div class="feedback">
+                <div class="feedback__titles">
+                    <h1 class="feedback__h1">Хотите продать ноутбук или компьютер?</h1>
+                    <h2 class="feedback__h2">Оценим и купим в любом состоянии!</h2>
+                </div>
+                <div class="feedback-grid">
+                    <img src="images/background/notebook.jpg" alt="">
+                    <form action="" class="feedback-form">
+                        <div class="feedback-form__title">Онлайн оценка<br>за 15 минут</div>
+                        <input class="js-input-mask feedback-form__input" type="text" placeholder="+7 (___) ___-__-__">
+                        <textarea class="feedback-form__textarea" name="" id="" cols="30" rows="10"
+                                  placeholder="Модель, характеристики, состояние..."></textarea>
+                        <a href="" class="button button-red feedback-form__button">Оценить сейчас</a>
+                    </form>
+                    <img src="images/background/money.jpg" alt="">
+                </div>
+            </div>
         </div>
     </div>
 
     <div class="content content__background">
-        <div class="container clearfix">
+        <div class="container">
             <div class="content__title">
                 Почему выбирают нас
             </div>
             <div class="why-we">
-                <div class="why-we-item why-we__item clearfix">
+                <div class="why-we__item">
                     <div class="why-we-item__icon">
                         <i class="fri fri-fast-icon"></i>
+                    </div>
+                    <div class="why-we-item__text">
+                        <h3 class="why-we-item__title">У нас быстрее всех + Бесплатный курьер!</h3>
+                        <div class="why-we-item__description">Курьер приедет бесплатно в любое время суток, оценит ваше устройство и выдаст деньги СРАЗУ! Также Вы можете воспользоваться формой онлайн-оценки и заранее узнать стоимость своего ноутбука.                        </div>
+                    </div>
+                </div>
+                <div class="why-we__item">
+                    <div class="why-we-item__icon">
+                        <i class="fri fri-profit-icon"></i>
+                    </div>
+                    <div class="why-we-item__text">
+                        <h3 class="why-we-item__title">Продать нам быстро и выгодно!</h3>
+                        <div class="why-we-item__description">Продавать технику самостоятельно долго, зачастую это занимает больше месяца и не оправдывает Ваших финансовых ожиданий. Позвоните - и Вы получите желаемую сумму в течение часа с момента обращения!
+                        </div>
+                    </div>
+                </div>
+                <div class="why-we__item">
+                    <div class="why-we-item__icon">
+                        <i class="fri fri-fair-icon"></i>
                     </div>
                     <div class="why-we-item__text">
                         <h3 class="why-we-item__title">Продать нам быстро и выгодно!</h3>
                         <div class="why-we-item__description">Курьер приедет бесплатно в любое время суток, оценит ваше
                             устройство и выдаст деньги СРАЗУ! Также Вы можете воспользоваться формой онлайн-оценки и
                             заранее узнать стоимость своего ноутбука.
-                        </div>
-                    </div>
-                </div>
-                <div class="why-we-item why-we__item clearfix">
-                    <div class="why-we-item__icon">
-                        <i class="fri fri-profit-icon"></i>
-                    </div>
-                    <div class="why-we-item__text">
-                        <h3 class="why-we-item__title">Продать нам быстро и выгодно!</h3>
-                        <div class="why-we-item__description">Продавать технику самостоятельно долго, зачастую это
-                            занимает больше месяца и не оправдывает Ваших финансовых ожиданий. Позвоните - и Вы получите
-                            желаемую сумму в течение часа с момента обращения!
-                        </div>
-                    </div>
-                </div>
-                <div class="why-we-item why-we__item clearfix">
-                    <div class="why-we-item__icon">
-                        <i class="fri fri-fair-icon"></i>
-                    </div>
-                    <div class="why-we-item__text">
-                        <h3 class="why-we-item__title">Честная оценка техники. Честный сервис, максимальная оценка!</h3>
-                        <div class="why-we-item__description">Мы готовы предложить Вам 90% от рыночной стоимости. Мы НЕ
-                            «впариваем» Вам Б/У ноутбуки взамен ваших и не предлагаем обмен. Только наличные! Мы НЕ
-                            обманываем Вас завышенной оценкой, как это делают конкуренты, чтобы заманить Вас в офис!
                         </div>
                     </div>
                 </div>
@@ -78,47 +80,14 @@
                 Схему проезда вы можете увидеть ниже
             </div>
             <div class="content-map">
-                <iframe class="content-map__map"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2246.376445312138!2d37.563575316185776!3d55.734587980548525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54bbdf5838719%3A0x96a1ef43119d5a59!2z0KHQsNCy0LLQuNC90YHQutCw0Y8g0L3QsNCxLiwgMTcsINCc0L7RgdC60LLQsCwg0KDQvtGB0YHQuNGPLCAxMTk0MzU!5e0!3m2!1sru!2skz!4v1486546824858"
-                        width="480" height="340" frameborder="0" style="border:0" allowfullscreen></iframe>
-                <div class="content-map__text">
-                    <span class="content-map__description_red">В связи с переездом, подъехать к нам в офис Вы можете только по предварительному звонку!</span>
-                    <span class="content-map__description">Мы рекомендуем Вам воспользоваться бесплатной услугой вызова курьера!</span>
-                    <a href="" class="button button-red content__button">Вызвать курьера</a>
-                    <span class="content-map__call-us">А также Вы можете позвонить нам круглосуточно:</span>
+
+                <iframe class="content-map__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2246.376445312138!2d37.563575316185776!3d55.734587980548525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54bbdf5838719%3A0x96a1ef43119d5a59!2z0KHQsNCy0LLQuNC90YHQutCw0Y8g0L3QsNCxLiwgMTcsINCc0L7RgdC60LLQsCwg0KDQvtGB0YHQuNGPLCAxMTk0MzU!5e0!3m2!1sru!2skz!4v1486546824858" frameborder="0" allowfullscreen></iframe>
+                    <div class="content-map__text">
+                    <p class="content-map__description_red">В связи с переездом, подъехать к нам в офис Вы можете только по предварительному звонку!</p>
+                    <p class="content-map__description">Мы рекомендуем Вам воспользоваться бесплатной услугой вызова курьера!</p>
+                    <a href="#" class="button button-red content__button">Вызвать курьера</a>
+                    <p class="content-map__call-us">А также Вы можете позвонить нам круглосуточно:</p>
                     <a class="content-map__phone" href="tel:84952667754">8 (495)266-77-54</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="header header__background">
-        <div class="header__container container">
-            <div class="header-grid">
-                <div class="header-grid__item">
-                    <a href="#" class="logo">
-                        <span class="logo__title">ООО «Скупка Ноутбуков»</span>
-                        <span class="logo__description">Оценка и скупка любых ноутбуков, планшетов, моноблоков в Москве и Московской области</span>
-                    </a>
-                </div>
-                <div class="header-grid__item">
-                    <div class="callback">
-                        <a href="#" class="button button-red callback__button">Перезвоните мне</a>
-                        <a href="#" class="callback__link">Корпоративным клиентам</a>
-                    </div>
-                </div>
-                <div class="header-grid__item">
-                    <div class="header-contacts">
-                        <div class="header-contacts__phone">
-                            <a class="header-contacts__phone-link" href="tel:84952667755">
-                                <i class="fri-mail-icon"></i>
-                                <div class="header-contacts__phone-number">8(495)266-77-55</div>
-                            </a>
-                        </div>
-                        <div class="header-contacts__work-schedule">
-                            <span class="header-contacts__day-and-night">Круглосуточно без выходных!</span>
-                            <span class="header-contacts__courier">Бесплатный курьер по Москве и МО!</span>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -130,22 +99,34 @@
                 <a href="#" class="js-close-popup popup__close">Закрыть</a>
             </div>
         </div>
-        <div class="popup" data-popup="thanks2">
-            <div class="popup-wrapper">
-                Тут рандомный текст 3
-                <a href="#" class="js-close-popup popup__close">Закрыть</a>
-            </div>
-        </div>
-        <div class="popup" data-popup="thanks3">
-            <div class="popup-wrapper">
-                Тут рандомный текст1 12312 312
-                <a href="#" class="js-close-popup popup__close">Закрыть</a>
-            </div>
-        </div>
-        <div class="popup" data-popup="thanks4">
-            <div class="popup-wrapper">
-                Тут рандомный текст asdasd a
-                <a href="#" class="js-close-popup popup__close">Закрыть</a>
+    </div>
+    <div class="header">
+        <div class="container">
+            <div class="header-grid">
+                <div class="header-grid__item">
+                    <div class="logo logo__item">
+                        <a href="#" class="logo__title">ООО «Скупка Ноутбуков»</a>
+                        <a href="#" class="logo__description">Оценка и скупка любых ноутбуков, планшетов, моноблоков в Москве и Московской области</a>
+                    </div>
+                </div>
+                <div class="header-grid__item">
+                    <div class="callback">
+                        <a href="#" class="js-open-popup button button-red callback__button" data-popup-name="thanks">Перезвоните мне</a>
+                        <a href="#" class="callback__link">Корпоративным клиентам</a>
+                    </div>
+                </div>
+                <div class="header-grid__item">
+                    <div class="header-contacts">
+                        <a class="header-contacts__phone-link" href="tel:84952667755">
+                            <i class="fri-mail-icon header-contacts__icon"></i>
+                            <div class="header-contacts__phone-number">8(495)266-77-55</div>
+                        </a>
+                        <div class="header-contacts__work-schedule">
+                            <div class="header-contacts__day-and-night">Круглосуточно без выходных!</div>
+                            <div class="header-contacts__courier">Бесплатный курьер по Москве и МО!</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
