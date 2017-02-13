@@ -1,42 +1,156 @@
+@media screen and (max-width: 1200px)
+  .container_1200px
+    margin: 0
+
 @media screen and (max-width: 991px)
-  .logo__title
-    font-size: 24px
+  .feedback-form
+    width: 250px
 
-  .header-contacts__phone-number
-    font-size: 24px
+  .feedback-form__button
+    font-size: 22px
 
-  .fri-mail-icon
-    height: 28px
-    width: 27px
-    background-position: 0px -130px
-    background-size: 66px auto
-
-@media screen and (max-width: 767px)
-  .logo__title
-    font-size: 14px
-
-  .header-contacts__phone-number
-    font-size: 14px
-
-  .logo__description
-    font-size: 12px
+  .feedback-form__title br
+    display: none
 
   .callback__button
-    font-size: 14px
+    margin-bottom: 5px
+
+  .header-contacts__phone-number
+    font-size: 30px
+
+  .header-grid
+    align-items: flex-start
+
+  .header-grid__item_middle
+    align-self: center
+
+  .container_1200px
     width: 100%
 
-  .callback__link
-    font-size: 12px
-    width: 100%
+  .feedback-grid
+    justify-content: center
+    padding-bottom: 15px
 
-  .fri-mail-icon
-    height: 15px
-    width: 14px
-    background-position: 0px -69px
-    background-size: 35px auto
+  .feedback__h1
+    font-size: 45px
+    line-height: 1em
+    margin-bottom: 10px
 
-  .header-contacts__courier
-    font-size: 12px
+  .feedback__h2
+    font-size: 35px
+    line-height: 1em
+    margin-bottom: 10px
 
-  .header-contacts__day-and-night
-    font-size: 12px
+  .feedback-grid
+    margin-bottom: 10px
+
+  .content__title
+    font-size: 34px
+
+  .why-we-item__title
+    font-size: 28px
+
+  .why-we-item__description
+    font-size: 18px
+
+  .content__text
+    font-size: 18px
+
+  .content-map__text
+    font-size: 18px
+
+@media screen and (max-width: 767px)
+  .header-grid
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+  .header-grid__item
+    display: block
+
+  .header-grid__item_first
+    -ms-flex-order: 1
+    order: 1
+
+  .header-grid__item_second
+    -ms-flex-order: 2
+    order: 2
+
+  .header-grid__item_last
+    -ms-flex-order: 3
+    order: 3
+
+  .logo__title
+    display: block
+    text-align: center
+    font-size: 30px
+
+  .logo__description
+    display: none
+
+  .callback__button
+    margin: 0 auto
+    max-width: 220px
+
+  .header-contacts__phone-link
+    justify-content: center
+
+  .header-contacts__work-schedule
+    text-align: center
+
+  .feedback__h1
+    font-size: 32px
+
+  .feedback__h2
+    font-size: 26px
+
+  .feedback-form__title
+    font-size: 24px
+
+  .feedback-form__textarea
+    font-size: 18px
+
+  .feedback-form__button
+    font-size: 20px
+
+  .content__title
+    font-size: 32px
+    &:after
+      width: 200%
+    &:before
+      width: 200%
+
+  .why-we-item__title
+    font-size: 26px
+
+  .why-we-item__description
+    font-size: 18px
+
+  .content__text
+    font-size: 18px
+
+  .content-map
+    flex-direction: column
+
+  .content-map__text
+    margin-bottom: 15px
+    padding: 0
+
+  .why-we-item__icon
+    flex-basis: 77px
+
+  .feedback__image
+    display: none
+
+  .fri-fast-icon_50px
+    +sprite(fast-icon-50px)
+
+  .fri-profit-icon_50px
+    +sprite(profit-icon-50px)
+
+  .fri-fair-icon_50px
+    +sprite(fair-icon-50px)
+
+  .header-contacts__icon_25px
+    +sprite(mail-icon-25px)

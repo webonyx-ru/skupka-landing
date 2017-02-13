@@ -8,12 +8,6 @@ html, body
 *
     box-sizing: border-box
 
-.clearfix
-    &:after
-        content: ''
-        display: block
-        clear: both
-
 .container
     max-width: 1000px
     min-width: 320px
@@ -24,7 +18,9 @@ html, body
     text-align: center
 
 .header
-    background: url('/images/background/big_pattern.png') repeat center
+    background-image: url('../images/background/big_pattern.png')
+    background-repeat: repeat
+    background-position: center
 
 .header-grid
     display: flex
@@ -32,7 +28,7 @@ html, body
     justify-content: space-between
 
 .header-grid__item
-    max-width: 33%
+    flex-basis: 33%
     padding: 15px 0 15px 0
     &.header-contacts__phone
         float: right
@@ -42,10 +38,13 @@ html, body
     text-decoration: none
 
 .logo__title
+    display: block
     font-size: 34px
     font-weight: bold
     color: #fff
     text-decoration: none
+    line-height: 1em
+    margin-bottom: 10px
 
 .logo__description
     font-size: 18px
@@ -53,9 +52,10 @@ html, body
     text-decoration: none
 
 .callback
-    display: flex
-    justify-content: center
-    flex-wrap: wrap
+    display: block
+
+.callback_text-center
+    text-align: center
 
 .button-red
     text-decoration: none
@@ -72,6 +72,10 @@ html, body
 
 .callback__button
     padding: 5px 20px 5px 20px
+    display: block
+    line-height: 1em
+    margin: 0 auto
+    width: 220px
 
 .callback__link
     color: #FFFFFF
@@ -82,9 +86,7 @@ html, body
         color: #1f4d8d
 
 .header-contacts
-    display: flex
-    justify-content: flex-end
-    flex-wrap: wrap
+    display: block
 
 .header-contacts__phone-link
     width: 100%
@@ -93,19 +95,22 @@ html, body
     align-items: center
     color: #FFFFFF
     text-decoration: none
+    line-height: 1em
+    margin-bottom: 10px
 
 .header-contacts__icon
     margin: 0 5px 0 5px
 
 .header-contacts__work-schedule
-    display: flex
-    justify-content: flex-end
-    flex-wrap: wrap
+    display: block
+    //float: right
+    text-align: right
     color: #FFFFFF
 
 .header-contacts__phone-number
     font-size: 37px
     font-weight: 900
+    line-height: 1em
 
 .header-contacts__day-and-night
     font-size: 18px
@@ -133,44 +138,54 @@ html, body
 
 .feedback-grid
     display: flex
-    flex-flow: wrap row
-    justify-content: space-between
+    flex-flow: nowrap
+    justify-content: center
     align-items: center
+    margin-bottom: 25px
 
 .feedback-form
-    display: flex
-    flex-flow: column
+    display: block
     border: 3px solid #0B99A3
     width: 300px
-    height: 380px
+    flex-shrink: 0
+    padding: 40px 20px 20px 20px
 
 .feedback-form__title
+    display: block
+    line-height: 1.1em
+    margin-bottom: 25px
     color: #034043
     font-size: 36px
     font-weight: bold
     text-align: center
-    margin: auto
 
 .feedback-form__input
-    width: 260px
-    margin: auto
+    width: 100%
+    margin-bottom: 10px
     &:hover
         box-shadow: 0 0 2px 1px red
 
 .feedback-form__textarea
     font-family: 'PT Sans Narrow', arial
-    width: 260px
+    width: 100%
     height: 115px
-    margin: auto
+    margin-bottom: 25px
+    font-size: 18px
 
 .feedback-form__button
-    width: 260px
+    width: 100%
     padding: 10px 0 10px 0
     margin: auto
     font-size: 26px
 
 .content__background
-    background: url("/images/background/bg.jpg") repeat
+    background: url("../images/background/bg.jpg") repeat
+
+.feedback__image
+    flex-shrink: 1
+    padding: 1%
+    img
+        width: 100%
 
 .content__text
     font-size: 26px
@@ -202,7 +217,8 @@ html, body
     padding: 20px 0 20px 0
 
 .why-we-item__icon
-    width: 170px
+    flex-basis: 120px
+    flex-shrink: 0
 
 .why-we-item__description
     font-size: 22px
@@ -228,12 +244,9 @@ html, body
     color: #ff1132
     font-weight: 900
 
-.content-map__description
-
 .content__button
     text-align: center
     padding: 5px 15px 5px 15px
-
 
 .content-map__call-us
     display: block
@@ -290,6 +303,49 @@ html, body
     padding: 20px
     background: #fff
     vertical-align: middle
+    background: url('http://skupkanoutbukov.ru/files/images/bg.jpg') repeat center
+    border: 5px solid #0b99a3
+
+.popup__close
+    position: absolute
+    right: -10px
+    top: -10px
+    width: 22px
+    height: 22px
+    border: 3px solid #FFFFFF
+    box-shadow: #000000
+    border-radius: 50%
+    background-color: #000000
+    &:before
+        content: ''
+        position: absolute
+        top: 50%
+        left: 50%
+        margin-top: -1px
+        margin-left: -5px
+        width: 10px
+        height: 2px
+        background-color: #fff
+        -webkit-transform: rotate(45deg)
+        -moz-transform: rotate(45deg)
+        -ms-transform: rotate(45deg)
+        -o-transform: rotate(45deg)
+        transform: rotate(45deg)
+    &:after
+        content: ''
+        position: absolute
+        top: 50%
+        left: 50%
+        margin-top: -5px
+        margin-left: -1px
+        width: 2px
+        height: 10px
+        background-color: #fff
+        -webkit-transform: rotate(45deg)
+        -moz-transform: rotate(45deg)
+        -ms-transform: rotate(45deg)
+        -o-transform: rotate(45deg)
+        transform: rotate(45deg)
 
 .popup-form__row
     margin: 1em 0

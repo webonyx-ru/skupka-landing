@@ -11,15 +11,19 @@
                     <h2 class="feedback__h2">Оценим и купим в любом состоянии!</h2>
                 </div>
                 <div class="feedback-grid">
-                    <img src="images/background/notebook.jpg" alt="">
+                    <div class="feedback__image">
+                        <img src="images/background/notebook.jpg" alt="">
+                    </div>
                     <form action="" class="feedback-form">
-                        <div class="feedback-form__title">Онлайн оценка<br>за 15 минут</div>
+                        <div class="feedback-form__title">Онлайн оценка <br>за 15 минут</div>
                         <input class="js-input-mask feedback-form__input" type="text" placeholder="+7 (___) ___-__-__">
                         <textarea class="feedback-form__textarea" name="" id="" cols="30" rows="10"
                                   placeholder="Модель, характеристики, состояние..."></textarea>
-                        <a href="" class="button button-red feedback-form__button">Оценить сейчас</a>
+                        <button href="" class="button button-red feedback-form__button">Оценить сейчас</button>
                     </form>
-                    <img src="images/background/money.jpg" alt="">
+                    <div class="feedback__image">
+                        <img src="images/background/money.jpg" alt="">
+                    </div>
                 </div>
             </div>
         </div>
@@ -33,7 +37,7 @@
             <div class="why-we">
                 <div class="why-we__item">
                     <div class="why-we-item__icon">
-                        <i class="fri fri-fast-icon"></i>
+                        <i class="fri-fast-icon fri-fast-icon_50px"></i>
                     </div>
                     <div class="why-we-item__text">
                         <h3 class="why-we-item__title">У нас быстрее всех + Бесплатный курьер!</h3>
@@ -42,7 +46,7 @@
                 </div>
                 <div class="why-we__item">
                     <div class="why-we-item__icon">
-                        <i class="fri fri-profit-icon"></i>
+                        <i class="fri-profit-icon fri-profit-icon_50px"></i>
                     </div>
                     <div class="why-we-item__text">
                         <h3 class="why-we-item__title">Продать нам быстро и выгодно!</h3>
@@ -52,7 +56,7 @@
                 </div>
                 <div class="why-we__item">
                     <div class="why-we-item__icon">
-                        <i class="fri fri-fair-icon"></i>
+                        <i class="fri-fair-icon fri-fair-icon_50px"></i>
                     </div>
                     <div class="why-we-item__text">
                         <h3 class="why-we-item__title">Продать нам быстро и выгодно!</h3>
@@ -92,14 +96,7 @@
             </div>
         </div>
     </div>
-    <div class="popup__overlay">
-        <div class="popup" data-popup="thanks">
-            <div class="popup-wrapper">
-                Тут рандомный текст 2
-                <a href="#" class="js-close-popup popup__close">Закрыть</a>
-            </div>
-        </div>
-    </div>
+
     <div class="header">
         <div class="container">
             <div class="header-grid">
@@ -109,8 +106,8 @@
                         <a href="#" class="logo__description">Оценка и скупка любых ноутбуков, планшетов, моноблоков в Москве и Московской области</a>
                     </div>
                 </div>
-                <div class="header-grid__item">
-                    <div class="callback">
+                <div class="header-grid__item header-grid__item_middle">
+                    <div class="callback callback_text-center">
                         <a href="#" class="js-open-popup button button-red callback__button" data-popup-name="thanks">Перезвоните мне</a>
                         <a href="#" class="callback__link">Корпоративным клиентам</a>
                     </div>
@@ -118,7 +115,7 @@
                 <div class="header-grid__item">
                     <div class="header-contacts">
                         <a class="header-contacts__phone-link" href="tel:84952667755">
-                            <i class="fri-mail-icon header-contacts__icon"></i>
+                            <i class="fri-mail-icon header-contacts__icon header-contacts__icon_25px"></i>
                             <div class="header-contacts__phone-number">8(495)266-77-55</div>
                         </a>
                         <div class="header-contacts__work-schedule">
@@ -127,6 +124,15 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+    <div class="popup__overlay">
+        <div class="popup" data-popup="thanks">
+            <div class="popup-wrapper popup__window">
+                <a href="#" class="js-close-popup popup__close"></a>
+                <div class="popup__text">Оставьте свой телефон и наш специалист перезвонит Вам в ближайшее время!</div>
+                <input class="js-input-mask feedback-form__input" type="text" placeholder="+7 (___) ___-__-__">
             </div>
         </div>
     </div>
