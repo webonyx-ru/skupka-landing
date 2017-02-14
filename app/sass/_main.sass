@@ -1,394 +1,417 @@
 @import "mixins/mixins"
 
 html, body
-    margin: 0
-    height: 100%
-    font-family: 'PT Sans Narrow', Arial
+  margin: 0
+  height: 100%
+  font-family: 'PT Sans Narrow', Arial
 
 *
-    box-sizing: border-box
+  box-sizing: border-box
+
+.margin_zero
+  margin: 0
+
+.content__background_bottom-25
+  margin-bottom: 25px
 
 .container
-    max-width: 1000px
-    min-width: 320px
-    margin: 0 auto
-    padding: 0 15px 0 15px
+  max-width: 1000px
+  min-width: 320px
+  margin: 0 auto
+  padding: 0 15px 0 15px
 
 .container_text-center
-    text-align: center
+  text-align: center
 
 .header
-    background-image: url('../images/background/big_pattern.png')
-    background-repeat: repeat
-    background-position: center
+  background-image: url('../images/background/big_pattern.png')
+  background-repeat: repeat
+  background-position: center
 
 .header-grid
-    display: flex
-    align-items: center
-    justify-content: space-between
+  display: flex
+  align-items: center
+  justify-content: space-between
 
 .header-grid__item
-    flex-basis: 33%
-    padding: 15px 0 15px 0
-    &.header-contacts__phone
-        float: right
+  flex-basis: 33%
+  padding: 15px 0 15px 0
+  &.header-contacts__phone
+    float: right
 
 .logo
-    color: #fff
-    text-decoration: none
+  color: #fff
+  text-decoration: none
 
 .logo__title
-    display: block
-    font-size: 34px
-    font-weight: bold
-    color: #fff
-    text-decoration: none
-    line-height: 1em
-    margin-bottom: 10px
+  display: block
+  font-size: 34px
+  font-weight: bold
+  color: #fff
+  text-decoration: none
+  line-height: 1em
+  margin-bottom: 10px
 
 .logo__description
-    font-size: 18px
-    color: #fff
-    text-decoration: none
+  font-size: 18px
+  color: #fff
+  text-decoration: none
 
 .callback
-    display: block
+  display: block
 
 .callback_text-center
-    text-align: center
+  text-align: center
 
 .button-red
-    text-decoration: none
-    background: #FF3954
-    border-radius: 10px
-    border-color: transparent
-    color: #FFFFFF
-    font-size: 26px
-    font-weight: bold
-    cursor: pointer
-    text-align: center
-    &:hover
-        background: #FF1132
+  text-decoration: none
+  background: #FF3954
+  border-radius: 10px
+  border-color: transparent
+  color: #FFFFFF
+  font-size: 26px
+  font-weight: bold
+  cursor: pointer
+  text-align: center
+  &:hover
+    background: #FF1132
 
 .callback__button
-    padding: 5px 20px 5px 20px
-    display: block
-    line-height: 1em
-    margin: 0 auto
-    width: 220px
+  padding: 5px 20px 5px 20px
+  display: block
+  line-height: 1em
+  margin: 0 auto
+  width: 220px
 
 .callback__link
-    color: #FFFFFF
-    font-size: large
-    cursor: pointer
-    text-align: center
-    &:hover
-        color: #1f4d8d
+  color: #FFFFFF
+  font-size: large
+  cursor: pointer
+  text-align: center
+  text-decoration: underline
+  &:hover
+    color: #1f4d8d
 
 .header-contacts
-    display: block
+  display: block
 
 .header-contacts__phone-link
-    width: 100%
-    display: flex
-    justify-content: flex-end
-    align-items: center
-    color: #FFFFFF
-    text-decoration: none
-    line-height: 1em
-    margin-bottom: 10px
+  width: 100%
+  display: flex
+  justify-content: flex-end
+  align-items: center
+  color: #FFFFFF
+  text-decoration: none
+  line-height: 1em
+  margin-bottom: 10px
 
 .header-contacts__icon
-    margin: 0 5px 0 5px
+  margin: 0 5px 0 5px
 
 .header-contacts__work-schedule
-    display: block
-    //float: right
-    text-align: right
-    color: #FFFFFF
+  display: block
+  text-align: right
+  color: #FFFFFF
 
 .header-contacts__phone-number
-    font-size: 37px
-    font-weight: 900
-    line-height: 1em
+  font-size: 37px
+  font-weight: 900
+  line-height: 1em
 
 .header-contacts__day-and-night
-    font-size: 18px
+  font-size: 18px
 
 .header-contacts__courier
-    font-size: 18px
+  font-size: 18px
 
 .feedback__titles
-    text-align: center
+  text-align: center
+  margin-bottom: 15px
 
 .feedback__h1
-    color: #007879
-    font-size: 60px
-    font-weight: bold
-    margin: 0
+  color: #007879
+  font-size: 60px
+  font-weight: bold
+
 
 .feedback__h2
-    color: #20B7BE
-    font-size: 55px
-    font-weight: bold
-    margin: 0
+  color: #20B7BE
+  font-size: 55px
+  font-weight: bold
+  margin: 0
 
 .container_1200px
-    margin: 0 -100px 0 -100px
+  margin: 0 -100px 0 -100px
 
 .feedback-grid
-    display: flex
-    flex-flow: nowrap
-    justify-content: center
-    align-items: center
-    margin-bottom: 25px
+  display: flex
+  flex-flow: nowrap
+  justify-content: center
+  align-items: center
+  margin-bottom: 25px
 
 .feedback-form
-    display: block
-    border: 3px solid #0B99A3
-    width: 300px
-    flex-shrink: 0
-    padding: 40px 20px 20px 20px
+  display: block
+  border: 3px solid #0B99A3
+  width: 300px
+  flex-shrink: 0
+  padding: 40px 20px 20px 20px
 
 .feedback-form__title
-    display: block
-    line-height: 1.1em
-    margin-bottom: 25px
-    color: #034043
-    font-size: 36px
-    font-weight: bold
-    text-align: center
+  display: block
+  line-height: 1.1em
+  margin-bottom: 25px
+  color: #034043
+  font-size: 36px
+  font-weight: bold
+  text-align: center
 
 .feedback-form__input
-    width: 100%
-    margin-bottom: 10px
-    color: #5B5B5B
-    &:hover::-moz-placeholder
-        color: #000000
-    &:hover:-ms-input-placeholder
-        color: #000000
-    &:hover::-webkit-input-placeholder
-        color: #000000
+  width: 100%
+  margin-bottom: 10px
+  color: #5B5B5B
+  &:hover::-moz-placeholder
+    color: #000000
+  &:hover:-ms-input-placeholder
+    color: #000000
+  &:hover::-webkit-input-placeholder
+    color: #000000
 
 .feedback-form__textarea
-    font-family: 'PT Sans Narrow', arial
-    width: 100%
-    height: 115px
-    margin-bottom: 25px
-    font-size: 18px
+  font-family: 'PT Sans Narrow', arial
+  width: 100%
+  height: 115px
+  margin-bottom: 25px
+  font-size: 18px
 
 .feedback-form__button
-    width: 100%
-    padding: 10px 0 10px 0
-    margin: auto
-    font-size: 26px
+  width: 100%
+  padding: 10px 0 10px 0
+  margin: auto
+  font-size: 26px
 
 .content__background
-    background: url("../images/background/bg.jpg") repeat
+  background: url("../images/background/bg.jpg") repeat
+  padding-bottom: 25px
 
 .feedback__image
-    flex-shrink: 1
-    padding: 1%
-    img
-        width: 100%
+  flex-shrink: 1
+  padding: 1%
+  img
+    width: 100%
 
 .content__text
-    font-size: 26px
+  font-size: 26px
 
 .content__title
-    text-align: center
-    font-size: 36px
-    font-weight: bold
-    padding: 20px 0 20px 0
-    overflow: hidden
-    &:after
-        width: 100%
-        content: ''
-        border-bottom: 3px solid #000
-        vertical-align: middle
-        display: inline-block
-        margin-right: -100%
-    &:before
-        width: 100%
-        content: ''
-        border-bottom: 3px solid #000
-        vertical-align: middle
-        display: inline-block
-        margin-left: -100%
+  text-align: center
+  font-size: 36px
+  font-weight: bold
+  padding: 20px 0 20px 0
+  overflow: hidden
+  line-height: 1em
+  &:after
+    width: 100%
+    content: ''
+    border-bottom: 3px solid #000
+    vertical-align: middle
+    display: inline-block
+    margin-right: -100%
+  &:before
+    width: 100%
+    content: ''
+    border-bottom: 3px solid #000
+    vertical-align: middle
+    display: inline-block
+    margin-left: -100%
 
 .why-we__item
-    display: flex
-    align-items: center
-    padding: 20px 0 20px 0
+  display: flex
+  align-items: center
+  padding: 20px 0 20px 0
 
 .why-we-item__icon
-    flex-basis: 120px
-    flex-shrink: 0
+  flex-basis: 120px
+  flex-shrink: 0
 
 .why-we-item__description
-    font-size: 22px
+  font-size: 22px
 
 .why-we-item__title
-    font-size: 34px
-    margin: 0
+  font-size: 34px
+  margin: 0
 
 .content-map
-    display: flex
+  display: flex
 
 .content-map__map
-    flex-basis: 500px
-    min-height: 480px
-    flex-shrink: 0
+  flex-basis: 500px
+  min-height: 340px
+  flex-shrink: 0
 
 .content-map__text
-    float: left
-    padding-left: 20px
-    font-size: 24px
+  float: left
+  padding-left: 20px
+  font-size: 24px
 
 .content-map__description_red
-    color: #ff1132
-    font-weight: 900
+  color: #ff1132
+  font-weight: 900
+
+.content-map__description
+  margin-bottom: 15px
 
 .content__button
-    text-align: center
-    padding: 5px 15px 5px 15px
+  display: block
+  width: 200px
+  text-align: center
+  padding: 5px 15px 5px 15px
+  margin-bottom: 45px
 
 .content-map__call-us
-    display: block
+  display: block
 
 .content-map__phone
-    display: block
-    font-weight: 900
-    text-decoration: none
-    color: #000000
-    font-size: 32px
+  display: block
+  font-weight: 900
+  text-decoration: none
+  color: #000000
+  font-size: 32px
 
 .popup
-    visibility: hidden
-    opacity: 0
-    transition: all 0.5s ease
-    position: absolute
-    margin-top: -100px
-    top: 50%
-    left: 50%
-    transform: translate3d(-50%,-80%,0)
-
-    &.opened
-        visibility: visible
-        opacity: 1
-        margin-top: 0
+  visibility: hidden
+  opacity: 0
+  transition: all 0.5s ease
+  position: absolute
+  margin-top: -100px
+  top: 50%
+  left: 50%
+  transform: translate3d(-50%,-50%,0)
+  &.opened
+    visibility: visible
+    opacity: 1
+    margin-top: 0
 
 .popup__overlay
-    display: flex
-    align-items: center
-    position: fixed
-    justify-content: center
-    left: 0
-    top: 0
-    width: 100%
-    height: 100%
-    text-align: center
-    -webkit-transition: all 0.6s ease 0s
-    -moz-transition: all 0.6s ease 0s
-    -ms-transition: all 0.6s ease 0s
-    -o-transition: all 0.6s ease 0s
-    transition: all 0.6s ease 0s
-    background-color: rgba(0, 0, 0, 0.6)
-    opacity: 0
-    visibility: hidden
+  display: flex
+  align-items: center
+  position: fixed
+  justify-content: center
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  text-align: center
+  -webkit-transition: all 0.6s ease 0s
+  -moz-transition: all 0.6s ease 0s
+  -ms-transition: all 0.6s ease 0s
+  -o-transition: all 0.6s ease 0s
+  transition: all 0.6s ease 0s
+  background-color: rgba(0, 0, 0, 0.6)
+  opacity: 0
+  visibility: hidden
 
-    &.opened
-        opacity: 1
-        visibility: visible
+  &.opened
+    opacity: 1
+    visibility: visible
 
 .popup-wrapper_call-me
-    display: inline-block
-    position: relative
-    max-width: 440px
-    //padding: 20px
-    padding: 75px 50px 30px 50px
-    background: #fff
-    vertical-align: middle
-    background: url('http://skupkanoutbukov.ru/files/images/bg.jpg') repeat center
-    border: 5px solid #0b99a3
+  display: inline-block
+  position: relative
+  max-width: 440px
+  padding: 75px 50px 30px 50px
+  background: #fff
+  vertical-align: middle
+  background: url('http://skupkanoutbukov.ru/files/images/bg.jpg') repeat center
+  border: 5px solid #0b99a3
 
 .feedback-form__input_call-me
-    display: block
-    margin: 0 auto 20px auto
-    width: 100%
+  display: block
+  margin: 0 auto 20px auto
+  width: 100%
 
 .popup-wrapper_corporate
-    display: inline-block
-    position: relative
-    max-width: 650px
-    //padding: 20px
-    padding: 80px 50px 30px 50px
-    background: #fff
-    vertical-align: middle
-    background: url('http://skupkanoutbukov.ru/files/images/bg.jpg') repeat center
-    border: 5px solid #0b99a3
+  display: inline-block
+  position: relative
+  max-width: 650px
+  padding: 80px 50px 30px 50px
+  background: #fff
+  vertical-align: middle
+  background: url('http://skupkanoutbukov.ru/files/images/bg.jpg') repeat center
+  border: 5px solid #0b99a3
 
 .feedback-form__input_corporate
-    display: block
-    margin: 0 auto 20px auto
-    width: 340px
+  display: block
+  margin: 0 auto 20px auto
+  width: 340px
 
 .popup__close
+  position: absolute
+  right: -10px
+  top: -10px
+  width: 22px
+  height: 22px
+  border: 3px solid #FFFFFF
+  box-shadow: #000000
+  border-radius: 50%
+  background-color: #000000
+  &:before
+    content: ''
     position: absolute
-    right: -10px
-    top: -10px
-    width: 22px
-    height: 22px
-    border: 3px solid #FFFFFF
-    box-shadow: #000000
-    border-radius: 50%
-    background-color: #000000
-    &:before
-        content: ''
-        position: absolute
-        top: 50%
-        left: 50%
-        margin-top: -1px
-        margin-left: -5px
-        width: 10px
-        height: 2px
-        background-color: #fff
-        -webkit-transform: rotate(45deg)
-        -moz-transform: rotate(45deg)
-        -ms-transform: rotate(45deg)
-        -o-transform: rotate(45deg)
-        transform: rotate(45deg)
-    &:after
-        content: ''
-        position: absolute
-        top: 50%
-        left: 50%
-        margin-top: -5px
-        margin-left: -1px
-        width: 2px
-        height: 10px
-        background-color: #fff
-        -webkit-transform: rotate(45deg)
-        -moz-transform: rotate(45deg)
-        -ms-transform: rotate(45deg)
-        -o-transform: rotate(45deg)
-        transform: rotate(45deg)
+    top: 50%
+    left: 50%
+    margin-top: -1px
+    margin-left: -5px
+    width: 10px
+    height: 2px
+    background-color: #fff
+    -webkit-transform: rotate(45deg)
+    -moz-transform: rotate(45deg)
+    -ms-transform: rotate(45deg)
+    -o-transform: rotate(45deg)
+    transform: rotate(45deg)
+  &:after
+    content: ''
+    position: absolute
+    top: 50%
+    left: 50%
+    margin-top: -5px
+    margin-left: -1px
+    width: 2px
+    height: 10px
+    background-color: #fff
+    -webkit-transform: rotate(45deg)
+    -moz-transform: rotate(45deg)
+    -ms-transform: rotate(45deg)
+    -o-transform: rotate(45deg)
+    transform: rotate(45deg)
 
 .popup-form__row
-    margin: 1em 0
+  margin: 1em 0
 
 .hidden
-    visibility: hidden
+  visibility: hidden
 
 .popup__text
-    display: block
-    font-size: 22px
-    margin-bottom: 25px
+  display: block
+  font-size: 22px
+  margin-bottom: 25px
 
 .popup-form__button
-    display: block
-    padding: 5px 50px 5px 50px
-    font-size: 18px
-    margin: 0 auto
+  display: block
+  padding: 5px 50px 5px 50px
+  font-size: 18px
+  margin: 0 auto
 
+.container-thanks
+  @extend .container
+  min-height: calc(100vh - 450px)
 
+.thanks-text
+  font-size: 80px
+  text-align: center
+  margin: 0
+  padding: 0.63em 0
+
+.footer
+  @extend .header

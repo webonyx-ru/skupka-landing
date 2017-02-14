@@ -1,0 +1,29 @@
+{% extends "layouts/app.twig" %}
+
+{% block pageTitle %}Главная страница{% endblock %}
+
+{% block content %}
+
+<div class="container-thanks">
+    <p class="thanks-text">Спасибо за обращение.<br>Наши менеджеры свяжутся с вами в ближайшее время</p>
+</div>
+
+
+
+{% endblock %}
+
+{% block script %}
+<script defer>
+        setTimeout(function () {
+     window.location.href = "/";
+     }, 3000);
+
+    var containerThanks = document.getElementsByClassName("container-thanks")[0],
+        headerDoc = document.getElementsByClassName("header")[0].offsetHeight,
+        footerDoc = document.getElementsByClassName("footer")[0].offsetHeight,
+        heightDoc = headerDoc + footerDoc;
+
+    containerThanks.style.height = "calc(100vh - " + heightDoc + "px)";
+
+</script>
+{% endblock %}
