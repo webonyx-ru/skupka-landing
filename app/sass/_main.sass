@@ -8,8 +8,9 @@ html, body
 *
   box-sizing: border-box
 
-.margin_zero
+p
   margin: 0
+  line-height: 1em
 
 .content__background_bottom-25
   margin-bottom: 25px
@@ -20,9 +21,6 @@ html, body
   margin: 0 auto
   padding: 0 15px 0 15px
 
-.container_text-center
-  text-align: center
-
 .header
   background-image: url('../images/background/big_pattern.png')
   background-repeat: repeat
@@ -31,26 +29,35 @@ html, body
 .header-grid
   display: flex
   align-items: center
-  justify-content: space-between
+  padding: 15px 0
 
 .header-grid__item
   flex-basis: 33%
-  padding: 15px 0 15px 0
   &.header-contacts__phone
     float: right
 
-.logo
-  color: #fff
-  text-decoration: none
+.header-grid__item_second
+  text-align: center
+
+.callback_btn-wrap
+  margin-bottom: 10px
+
+.contacts__phone_wrapper
+  margin-bottom: 10px
+
+.container_header-wrapper
+  padding: 8px 0 23px 0
+
+.header-logo
+  display: block
 
 .logo__title
   display: block
   font-size: 34px
   font-weight: bold
   color: #fff
-  text-decoration: none
-  line-height: 1em
   margin-bottom: 10px
+  line-height: 1.2em
 
 .logo__description
   font-size: 18px
@@ -58,13 +65,13 @@ html, body
   text-decoration: none
 
 .callback
-  display: block
+  //display: block
+  //text-align: center
 
-.callback_text-center
-  text-align: center
-
-.button-red
-  text-decoration: none
+.button
+  display: inline-block
+  min-width: 200px
+  padding: 14px 0
   background: #FF3954
   border-radius: 10px
   border-color: transparent
@@ -76,12 +83,8 @@ html, body
   &:hover
     background: #FF1132
 
-.callback__button
-  padding: 5px 20px 5px 20px
-  display: block
-  line-height: 1em
-  margin: 0 auto
-  width: 220px
+.button_callback
+  margin-bottom: 10px
 
 .callback__link
   color: #FFFFFF
@@ -95,34 +98,36 @@ html, body
 .header-contacts
   display: block
 
-.header-contacts__phone-link
-  width: 100%
+.contacts__phone
   display: flex
   justify-content: flex-end
   align-items: center
+
+.contacts__phone-icon
+  flex-basis: 50px
+  flex-shrink: 1
+
+.container_header-wrap
+
+
+.contacts__phone-number
   color: #FFFFFF
   text-decoration: none
-  line-height: 1em
-  margin-bottom: 10px
-
-.header-contacts__icon
-  margin: 0 5px 0 5px
-
-.header-contacts__work-schedule
-  display: block
-  text-align: right
-  color: #FFFFFF
-
-.header-contacts__phone-number
   font-size: 37px
   font-weight: 900
   line-height: 1em
-
-.header-contacts__day-and-night
+  
+.contacts__schedule
+  display: block
+  text-align: right
+  color: #FFFFFF
   font-size: 18px
 
-.header-contacts__courier
-  font-size: 18px
+//.header-contacts__day-and-night
+//  font-size: 18px
+//
+//.header-contacts__courier
+//  font-size: 18px
 
 .feedback__titles
   text-align: center

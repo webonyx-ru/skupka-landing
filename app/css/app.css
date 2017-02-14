@@ -57,8 +57,9 @@ html, body {
   box-sizing: border-box;
 }
 
-.margin_zero {
+p {
   margin: 0;
+  line-height: 1em;
 }
 
 .content__background_bottom-25 {
@@ -72,10 +73,6 @@ html, body {
   padding: 0 15px 0 15px;
 }
 
-.container_text-center {
-  text-align: center;
-}
-
 .header, .footer {
   background-image: url("../images/background/big_pattern.png");
   background-repeat: repeat;
@@ -87,22 +84,35 @@ html, body {
   display: flex;
   -ms-flex-align: center;
   align-items: center;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  padding: 15px 0;
 }
 
 .header-grid__item {
   -ms-flex-preferred-size: 33%;
   flex-basis: 33%;
-  padding: 15px 0 15px 0;
 }
 .header-grid__item.header-contacts__phone {
   float: right;
 }
 
-.logo {
-  color: #fff;
-  text-decoration: none;
+.header-grid__item_second {
+  text-align: center;
+}
+
+.callback_btn-wrap {
+  margin-bottom: 10px;
+}
+
+.contacts__phone_wrapper {
+  margin-bottom: 10px;
+}
+
+.container_header-wrapper {
+  padding: 8px 0 23px 0;
+}
+
+.header-logo {
+  display: block;
 }
 
 .logo__title {
@@ -110,9 +120,8 @@ html, body {
   font-size: 34px;
   font-weight: bold;
   color: #fff;
-  text-decoration: none;
-  line-height: 1em;
   margin-bottom: 10px;
+  line-height: 1.2em;
 }
 
 .logo__description {
@@ -121,16 +130,10 @@ html, body {
   text-decoration: none;
 }
 
-.callback {
-  display: block;
-}
-
-.callback_text-center {
-  text-align: center;
-}
-
-.button-red {
-  text-decoration: none;
+.button {
+  display: inline-block;
+  min-width: 200px;
+  padding: 14px 0;
   background: #FF3954;
   border-radius: 10px;
   border-color: transparent;
@@ -140,16 +143,12 @@ html, body {
   cursor: pointer;
   text-align: center;
 }
-.button-red:hover {
+.button:hover {
   background: #FF1132;
 }
 
-.callback__button {
-  padding: 5px 20px 5px 20px;
-  display: block;
-  line-height: 1em;
-  margin: 0 auto;
-  width: 220px;
+.button_callback {
+  margin-bottom: 10px;
 }
 
 .callback__link {
@@ -167,41 +166,34 @@ html, body {
   display: block;
 }
 
-.header-contacts__phone-link {
-  width: 100%;
+.contacts__phone {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: end;
   justify-content: flex-end;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.contacts__phone-icon {
+  -ms-flex-preferred-size: 50px;
+  flex-basis: 50px;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+}
+
+.contacts__phone-number {
   color: #FFFFFF;
   text-decoration: none;
-  line-height: 1em;
-  margin-bottom: 10px;
-}
-
-.header-contacts__icon {
-  margin: 0 5px 0 5px;
-}
-
-.header-contacts__work-schedule {
-  display: block;
-  text-align: right;
-  color: #FFFFFF;
-}
-
-.header-contacts__phone-number {
   font-size: 37px;
   font-weight: 900;
   line-height: 1em;
 }
 
-.header-contacts__day-and-night {
-  font-size: 18px;
-}
-
-.header-contacts__courier {
+.contacts__schedule {
+  display: block;
+  text-align: right;
+  color: #FFFFFF;
   font-size: 18px;
 }
 
@@ -657,11 +649,11 @@ html, body {
   }
 
   .header-grid__item_second {
-    -ms-flex-order: 2;
+    -ms-flex-order: 3;
     order: 2;
   }
 
-  .header-grid__item_last {
+  .header-grid__item_third {
     -ms-flex-order: 3;
     order: 3;
   }
@@ -793,7 +785,7 @@ html, body {
     width: 50px;
   }
 
-  .header-contacts__icon_25px {
+  .fri-mail-icon {
     background-image: url('../images/icons-s163fee192c.png');
     background-position: 0 -307px;
     background-repeat: no-repeat;
