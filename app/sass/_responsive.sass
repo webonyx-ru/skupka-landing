@@ -6,6 +6,12 @@
   .feedback-form
     width: 250px
 
+  .logo__title
+    font-size: 28px
+
+  .why-we__icon
+    flex-basis: 80px
+
   .feedback-form__button
     font-size: 22px
 
@@ -15,8 +21,8 @@
   .callback__button
     margin-bottom: 5px
 
-  .header-contacts__phone-number
-    font-size: 30px
+  .contacts__phone-number
+    font-size: 28px
 
   .header-grid
     align-items: flex-start
@@ -31,12 +37,12 @@
     justify-content: center
     padding-bottom: 15px
 
-  .feedback__h1
+  .section-feedback__title
     font-size: 45px
     line-height: 1em
     margin-bottom: 10px
 
-  .feedback__h2
+  .section-feedback__subtitle
     font-size: 35px
     line-height: 1em
     margin-bottom: 10px
@@ -47,19 +53,30 @@
   .content__title
     font-size: 34px
 
-  .why-we-item__title
+  .why-we__title
     font-size: 28px
 
-  .why-we-item__description
+  .why-we__description
     font-size: 18px
 
-  .content__text
+  .content__section
     font-size: 18px
 
   .content-map__text
     font-size: 18px
 
 @media screen and (max-width: 767px)
+  .section-feedback__title
+    font-size: 35px
+
+  .section-feedback__subtitle
+    font-size: 30px
+    padding: 0 15px
+
+  .content-map__map
+    flex-basis: 300px
+    margin-bottom: 20px
+
   .feedback-grid
     margin-bottom: 0
     padding: 0
@@ -73,7 +90,8 @@
     align-items: center
 
   .header-grid__item
-    flex-basis: 100%
+    margin: 10px 0
+
 
   .header-grid__item_first
     -ms-flex-order: 1
@@ -87,10 +105,12 @@
     -ms-flex-order: 3
     order: 3
 
+  .contacts__phone-icon
+    flex-basis: 30px
+
   .logo__title
     display: block
     text-align: center
-    font-size: 30px
 
   .logo__description
     display: block
@@ -105,7 +125,7 @@
   .header-contacts__phone-link
     justify-content: center
 
-  .header-contacts__work-schedule
+  .contacts__schedule
     text-align: center
 
   .feedback__h1
@@ -126,12 +146,29 @@
   .feedback-form__button
     font-size: 20px
 
+  .popup
+    width: 90%
+    margin: 0
+    left: 5%
+    padding: 30px 20px
+
   .content__title
-    font-size: 32px
+    font-size: 30px
+    margin-bottom: 30px
+    padding: 20px 10px
+    position: relative
     &:after
-      width: 200%
+      position: absolute
+      width: 100%
+      margin: 0
+      left: 0
+      top: 0
     &:before
-      width: 200%
+      position: absolute
+      width: 100%
+      right: 0
+      margin: 0
+      bottom: 0
 
   .why-we-item__title
     font-size: 26px
@@ -146,38 +183,37 @@
     flex-direction: column
 
   .content-map__text
-    margin-bottom: 15px
+    margin: 0
     padding: 0
+
+  .content-map__button-wrap
+    margin-bottom: 20px
 
   .why-we-item__icon
     flex-basis: 77px
 
-  .feedback__image
+  .feedback-grid__image
     display: none
 
-  .fri-fast-icon_50px
+  .fri-fast-icon
     +sprite(fast-icon-50px)
 
-  .fri-profit-icon_50px
+  .fri-profit-icon
     +sprite(profit-icon-50px)
 
-  .fri-fair-icon_50px
+  .fri-fair-icon
     +sprite(fair-icon-50px)
 
   .fri-mail-icon
     +sprite(mail-icon-25px)
-
-  .popup-wrapper_call-me
-    max-width: 320px
 
   .popup-wrapper_corporate
     max-width: 320px
 
   .popup__text
     font-size: 18px
+    max-width: 400px
+    margin: 0 auto 20px
 
   .feedback-form__input_corporate
-    max-width: 100%
-
-  .feedback-form__input_call-me
     max-width: 100%

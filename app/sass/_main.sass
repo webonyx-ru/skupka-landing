@@ -1,4 +1,5 @@
 @import "mixins/mixins"
+//general
 
 html, body
   margin: 0
@@ -7,19 +8,38 @@ html, body
 
 *
   box-sizing: border-box
-
-p
+  padding: 0
   margin: 0
-  line-height: 1em
-
-.content__background_bottom-25
-  margin-bottom: 25px
 
 .container
-  max-width: 1000px
+  max-width: 1030px
   min-width: 320px
   margin: 0 auto
   padding: 0 15px 0 15px
+
+.section-feedback__container
+  max-width: 1200px
+
+.button
+  display: inline-block
+  min-width: 200px
+  padding: 5px 0
+  background: #FF3954
+  border-radius: 10px
+  border-color: transparent
+  color: #FFFFFF
+  font-size: 26px
+  font-weight: bold
+  cursor: pointer
+  text-align: center
+  outline: none
+  &:hover
+    background: #FF1132
+
+.popup__button
+  font-size: 18px
+
+//header
 
 .header
   background-image: url('../images/background/big_pattern.png')
@@ -36,20 +56,14 @@ p
   &.header-contacts__phone
     float: right
 
+.header-logo
+  display: block
+
 .header-grid__item_second
   text-align: center
 
 .callback_btn-wrap
-  margin-bottom: 10px
-
-.contacts__phone_wrapper
-  margin-bottom: 10px
-
-.container_header-wrapper
-  padding: 8px 0 23px 0
-
-.header-logo
-  display: block
+  margin-bottom: 5px
 
 .logo__title
   display: block
@@ -64,28 +78,6 @@ p
   color: #fff
   text-decoration: none
 
-.callback
-  //display: block
-  //text-align: center
-
-.button
-  display: inline-block
-  min-width: 200px
-  padding: 14px 0
-  background: #FF3954
-  border-radius: 10px
-  border-color: transparent
-  color: #FFFFFF
-  font-size: 26px
-  font-weight: bold
-  cursor: pointer
-  text-align: center
-  &:hover
-    background: #FF1132
-
-.button_callback
-  margin-bottom: 10px
-
 .callback__link
   color: #FFFFFF
   font-size: large
@@ -93,7 +85,7 @@ p
   text-align: center
   text-decoration: underline
   &:hover
-    color: #1f4d8d
+    color: rgb(65, 144, 255)
 
 .header-contacts
   display: block
@@ -102,13 +94,11 @@ p
   display: flex
   justify-content: flex-end
   align-items: center
+  margin-bottom: 5px
 
 .contacts__phone-icon
   flex-basis: 50px
   flex-shrink: 1
-
-.container_header-wrap
-
 
 .contacts__phone-number
   color: #FFFFFF
@@ -123,42 +113,42 @@ p
   color: #FFFFFF
   font-size: 18px
 
-//.header-contacts__day-and-night
-//  font-size: 18px
-//
-//.header-contacts__courier
-//  font-size: 18px
+//Section feedback
+  
+.section-feedback
+  position: relative
+  padding: 10px 0 30px
+  box-shadow: 0 0 10px 0 #000
+  z-index: 10
 
-.feedback__titles
-  text-align: center
-  margin-bottom: 15px
-
-.feedback__h1
+.section-feedback__title
   color: #007879
   font-size: 60px
   font-weight: bold
+  text-align: center
+  margin-bottom: 10px
+  line-height: 1em
 
-
-.feedback__h2
+.section-feedback__subtitle
   color: #20B7BE
   font-size: 55px
   font-weight: bold
-  margin: 0
-
-.container_1200px
-  margin: 0 -100px 0 -100px
+  line-height: 1em
+  margin-bottom: 10px
+  text-align: center
 
 .feedback-grid
   display: flex
   flex-flow: nowrap
   justify-content: center
   align-items: center
-  margin-bottom: 25px
 
 .feedback-form
   display: block
+
+.feedback-grid__form
   border: 3px solid #0B99A3
-  width: 300px
+  width: 320px
   flex-shrink: 0
   padding: 40px 20px 20px 20px
 
@@ -171,23 +161,56 @@ p
   font-weight: bold
   text-align: center
 
+.feedback-form__line
+  margin-bottom: 20px
+
 .feedback-form__input
   width: 100%
-  margin-bottom: 10px
-  color: #5B5B5B
+  color: #000
+  height: 30px
+  background-color: #fff
+  border: 1px solid #999
+  padding: 0 10px
+  text-align: left
+  outline: none
   &:hover::-moz-placeholder
     color: #000000
   &:hover:-ms-input-placeholder
     color: #000000
   &:hover::-webkit-input-placeholder
     color: #000000
+  &:focus
+    box-shadow: 0 0 5px 1px #7294CB
+    border: none
+  &.error
+    box-shadow: 0 0 5px 1px #FF1132
+    border: none
+    &:focus
+      outline: none
+    & + .feedback-form__warning
+      display: block
+
 
 .feedback-form__textarea
   font-family: 'PT Sans Narrow', arial
   width: 100%
   height: 115px
-  margin-bottom: 25px
-  font-size: 18px
+  max-height: 250px
+  padding: 10px
+  font-size: 17px
+  line-height: 1em
+  resize: vertical
+  border: 1px solid #999
+  color: #000
+  &:hover::-moz-placeholder
+    color: #000000
+  &:hover:-ms-input-placeholder
+    color: #000000
+  &:hover::-webkit-input-placeholder
+    color: #000000
+  &:focus
+    box-shadow: 0 0 5px 1px #7294CB
+    border: none
 
 .feedback-form__button
   width: 100%
@@ -195,9 +218,12 @@ p
   margin: auto
   font-size: 26px
 
-.content__background
-  background: url("../images/background/bg.jpg") repeat
-  padding-bottom: 25px
+.feedback-grid__item-image
+  flex-shrink: 1
+  padding: 0 5px
+
+.feedback-grid__item_image
+  width: 100%
 
 .feedback__image
   flex-shrink: 1
@@ -205,16 +231,24 @@ p
   img
     width: 100%
 
-.content__text
-  font-size: 26px
+//Section "Why choose us"
+
+.content
+  position: relative
+  z-index: 5
+  background: url("../images/background/bg.jpg") repeat
+  padding-top: 50px
+  padding-bottom: 25px
 
 .content__title
+  display: block
   text-align: center
   font-size: 36px
   font-weight: bold
-  padding: 20px 0 20px 0
   overflow: hidden
   line-height: 1em
+  text-transform: uppercase
+  margin-bottom: 50px
   &:after
     width: 100%
     content: ''
@@ -222,6 +256,7 @@ p
     vertical-align: middle
     display: inline-block
     margin-right: -100%
+    margin-left: 25px
   &:before
     width: 100%
     content: ''
@@ -229,29 +264,47 @@ p
     vertical-align: middle
     display: inline-block
     margin-left: -100%
+    margin-right: 25px
+
+.content__section
+  margin-bottom: 50px
+
+.why-we__icon
+  flex-basis: 190px
+  flex-shrink: 0
+  text-align: center
+
+.why-we__description
+  font-size: 22px
+
+.why-we__title
+  font-size: 34px
+  font-weight: bold
+  line-height: 1em
+  margin-bottom: 10px
+
+.content-text
+  font-size: 26px
+  line-height: 1.2em
+  p
+    margin-bottom: 30px
 
 .why-we__item
   display: flex
   align-items: center
-  padding: 20px 0 20px 0
+  margin-bottom: 50px
+  &:last-child
+    margin-bottom: 0
 
-.why-we-item__icon
-  flex-basis: 120px
-  flex-shrink: 0
-
-.why-we-item__description
-  font-size: 22px
-
-.why-we-item__title
-  font-size: 34px
-  margin: 0
+.feedback-grid__image
+  width: 100%
 
 .content-map
   display: flex
 
 .content-map__map
-  flex-basis: 500px
-  min-height: 340px
+  flex-basis: 480px
+  min-height: 350px
   flex-shrink: 0
 
 .content-map__text
@@ -259,19 +312,15 @@ p
   padding-left: 20px
   font-size: 24px
 
-.content-map__description_red
+.content-map__descr
+  margin-bottom: 15px
+
+.content-map__descr_red
   color: #ff1132
   font-weight: 900
 
-.content-map__description
-  margin-bottom: 15px
-
-.content__button
-  display: block
-  width: 200px
-  text-align: center
-  padding: 5px 15px 5px 15px
-  margin-bottom: 45px
+.content-map__button-wrap
+  margin-bottom: 40px
 
 .content-map__call-us
   display: block
@@ -286,27 +335,49 @@ p
 .popup
   visibility: hidden
   opacity: 0
-  transition: all 0.5s ease
+  -webkit-transition: all 0.5s ease 0s
+  -moz-transition: all 0.5s ease 0s
+  -ms-transition: all 0.5s ease 0s
+  -o-transition: all 0.5s ease 0s
+  transition: all 0.5s ease 0s
   position: absolute
   margin-top: -100px
   top: 50%
   left: 50%
-  transform: translate3d(-50%,-50%,0)
+  -webkit-transform: translateY(-50%)
+  -moz-transform: translateY(-50%)
+  -ms-transform: translateY(-50%)
+  -o-transform: translateY(-50%)
+  transform: translateY(-50%)
+  padding: 60px 50px 30px
+  background: url('http://skupkanoutbukov.ru/files/images/bg.jpg') repeat center, #fff
+  border: 5px solid #0b99a3
   &.opened
     visibility: visible
     opacity: 1
     margin-top: 0
 
-.popup__overlay
-  display: flex
-  align-items: center
+.popup_call-me
+  width: 440px
+  margin-left: -220px
+
+.popup_corporate
+  width: 650px
+  margin-left: -325px
+
+.popup_successfully
+  width: 400px
+  margin-left: -200px
+  padding: 50px 20px 25px
+
+.popup-overlay
+  display: block
   position: fixed
-  justify-content: center
+  z-index: 200
   left: 0
   top: 0
   width: 100%
   height: 100%
-  text-align: center
   -webkit-transition: all 0.6s ease 0s
   -moz-transition: all 0.6s ease 0s
   -ms-transition: all 0.6s ease 0s
@@ -315,51 +386,29 @@ p
   background-color: rgba(0, 0, 0, 0.6)
   opacity: 0
   visibility: hidden
-
   &.opened
     opacity: 1
     visibility: visible
 
-.popup-wrapper_call-me
-  display: inline-block
-  position: relative
-  max-width: 440px
-  padding: 75px 50px 30px 50px
-  background: #fff
-  vertical-align: middle
-  background: url('http://skupkanoutbukov.ru/files/images/bg.jpg') repeat center
-  border: 5px solid #0b99a3
+.fri-mail-icon
+  cursor: pointer
 
-.feedback-form__input_call-me
-  display: block
-  margin: 0 auto 20px auto
-  width: 100%
-
-.popup-wrapper_corporate
-  display: inline-block
-  position: relative
-  max-width: 650px
-  padding: 80px 50px 30px 50px
-  background: #fff
-  vertical-align: middle
-  background: url('http://skupkanoutbukov.ru/files/images/bg.jpg') repeat center
-  border: 5px solid #0b99a3
-
-.feedback-form__input_corporate
-  display: block
-  margin: 0 auto 20px auto
-  width: 340px
+.popup__feedback-form
+  text-align: center
+  max-width: 350px
+  margin: 0 auto
 
 .popup__close
   position: absolute
   right: -10px
   top: -10px
-  width: 22px
-  height: 22px
-  border: 3px solid #FFFFFF
-  box-shadow: #000000
+  width: 25px
+  height: 25px
+  border: 2px solid #FFFFFF
+  box-shadow: 0 0 10px 0 #000
   border-radius: 50%
   background-color: #000000
+  cursor: pointer
   &:before
     content: ''
     position: absolute
@@ -398,19 +447,11 @@ p
   visibility: hidden
 
 .popup__text
-  display: block
   font-size: 22px
+  line-height: 1.2em
+  text-align: center
   margin-bottom: 25px
 
-.popup-form__button
-  display: block
-  padding: 5px 50px 5px 50px
-  font-size: 18px
-  margin: 0 auto
-
-.container-thanks
-  @extend .container
-  min-height: calc(100vh - 450px)
 
 .thanks-text
   font-size: 80px
@@ -420,3 +461,9 @@ p
 
 .footer
   @extend .header
+  
+.feedback-form__warning
+  color: #FF1132
+  margin-top: 5px
+  text-align: left
+  display: none

@@ -226,11 +226,11 @@
         var modal = {};
 
         modal.init = function () {
-            var popupOverlays = _self.doc.querySelectorAll('.popup__overlay');
+            var popupOverlays = _self.doc.querySelectorAll('.popup-overlay');
 
             for (var i = 0; i < popupOverlays.length; i++) {
                 popupOverlays[i].addEventListener('click', function (e) {
-                    if(e.target.classList.contains('popup__overlay')) {
+                    if(e.target.classList.contains('popup-overlay')) {
                         modal.closeModal();
                     }
                 });
@@ -258,14 +258,14 @@
         };
 
         modal.openModal = function (popupName) {
-            _self.doc.querySelector('.popup__overlay').classList.add('opened');
+            _self.doc.querySelector('.popup-overlay').classList.add('opened');
             var popup = _self.doc.querySelector('[data-popup="'+popupName+'"]');
 
             popup.classList.add('opened');
         };
 
         modal.closeModal = function (popupName) {
-            _self.doc.querySelector('.popup__overlay').classList.remove('opened');
+            _self.doc.querySelector('.popup-overlay').classList.remove('opened');
             if(popupName) {
                 var popup = _self.doc.querySelector('[data-popup="'+popupName+'"]');
                 popup.classList.remove('opened');
@@ -299,9 +299,63 @@
     });
 
     app.appLoad('full', function (e) {
-        // console.log('App was fully load! Paste external app source code here... For example if your use jQuery and something else');
-        // App was fully load! Paste external app source code here... 4example if your use jQuery and something else
-        // Please do not use jQuery ready state function to avoid mass calling document event trigger!
+        $('form').submit(function (e) {
+            console.log(app.openPopup())
+            var that = $(this),
+                form = e.target,
+                serialized = serializeForm(form),
+                url = './mail.php';
+
+            if (serialized.phone !== '') {
+                $.post(url, serialized, function(response) {
+                    console.log(response);
+                    if(response === 1) {
+                        if(response) {
+                            that.find("input[name='phone']").removeClass("error");
+                            app.modal().closeModal();
+                            app.modal().openModal('successfully');
+                        }
+                    }
+                });
+            } else {
+                that.find("input[name='phone']").addClass("error");
+            }
+
+            return false;
+        });
+
+        function serializeForm($form) {
+            var returnObject = {},
+
+                tempMeta = {}, hasMeta = false;
+
+            for(var i=0; i<$form.length; i++) {
+
+                if($form[i].type !== 'submit' && $form[i].name !== 'thumbnail' && $form[i].name !== '') {
+                    var tempName = $form[i].name.toString(),
+                        tempVal = $form[i].value;
+
+                    if(tempName.indexOf('meta') !== -1) {
+                        var meta = tempName.split('.');
+
+                        hasMeta = true;
+                        tempMeta[meta[1]] = tempVal;
+                    } else returnObject[tempName] = tempVal;
+
+                    if($form[i].type === 'checkbox') {
+                        if($form[i].checked === true) returnObject[tempName] = 1;
+                        else returnObject[tempName] = 0;
+                    }
+                }
+            }
+
+            if(hasMeta) returnObject['meta'] = tempMeta;
+
+            return returnObject;
+        };
+
+
+
     });
 
 })();
