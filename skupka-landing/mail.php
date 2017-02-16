@@ -1,4 +1,5 @@
 <?php
+
 if(isset($_POST['phone'])) {
 
     $phone = "Телефон:\r\n" . $_POST['phone'] . "\r\n\r\n";
@@ -15,7 +16,7 @@ if(isset($_POST['phone'])) {
 
     $from_email = 'request@skupkanoutbukov.ru'; //sender email
     // $recipient_email = 'yurabogatyrenko@gmail.com'; //recipient email
-    $recipient_email = 'stanislavrylsk@gmail.com'; //recipient email
+    $recipient_email = 'klgndnfjkdfdfd@gmail.com'; //recipient email
     $subject = $_POST['name']; //subject of email
 
 
@@ -37,8 +38,6 @@ if(isset($_POST['phone'])) {
     $sentMail = @mail($recipient_email, $subject, $body, $headers);
 
     if($sentMail) {
-        header('Location: /thanks.html');
-    }else{
-        die('Could not send mail! Please check your PHP mail configuration.');
-    }
+        echo 'true';
+    };
 }

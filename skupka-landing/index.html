@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Главная страница</title>
-
+    <title>Скупка ноутбуков в Москве круглосуточно — Выгодно без документов! — СкупкаНоутбуков ру</title>
+    <meta name="description" content="Круглосуточная онлайн оценка и скупка ноутбуков в Москве и Подмосковье! Бесплатный курьер 24/7."></meta>
+    <link rel="shortcut icon" href="/favicon.ico" />
     <!-- Stylesheets -->
     
 
@@ -20,27 +21,24 @@
     <div class="container">
         <div class="header-grid">
             <div class="header-grid__item header-grid__item_first">
-                <div class="logo logo__item">
-                    <p class="logo__title margin_zero">ООО «Скупка Ноутбуков»</p>
-                    <div class="logo__description">Оценка и скупка любых ноутбуков, планшетов, моноблоков в Москве и Московской области</div>
-                </div>
-            </div>
-            <div class="header-grid__item header-grid__item_middle header-grid__item_last">
-                <div class="callback callback_text-center">
-                    <span class="js-open-popup button button-red callback__button" data-popup-name="call-me-back">Перезвоните мне</span>
-                    <a class="js-open-popup callback__link" data-popup-name="corporate">Корпоративным клиентам</a>
+                <div class="logo">
+                    <p class="logo__title">ООО «Скупка Ноутбуков»</p>
+                    <p class="logo__description">Оценка и скупка любых ноутбуков, планшетов, моноблоков в Москве и Московской области</p>
                 </div>
             </div>
             <div class="header-grid__item header-grid__item_second">
-                <div class="header-contacts">
-                    <a class="header-contacts__phone-link" href="tel:84952667755">
-                        <i class="fri-mail-icon header-contacts__icon header-contacts__icon_25px"></i>
-                        <div class="header-contacts__phone-number">8(495)266-77-55</div>
-                    </a>
-                    <div class="header-contacts__work-schedule">
-                        <div class="header-contacts__day-and-night">Круглосуточно без выходных!</div>
-                        <div class="header-contacts__courier">Бесплатный курьер по Москве и МО!</div>
+                <div class="callback">
+                    <p class="callback_btn-wrap"><span class="js-open-popup button" data-popup-name="call-me-back">Перезвоните мне</span></p>
+                    <p><span class="js-open-popup callback__link" data-popup-name="corporate">Корпоративным клиентам</span></p>
+                </div>
+            </div>
+            <div class="header-grid__item header-grid__item_third">
+                <div class="contacts">
+                    <div class="contacts__phone">
+                        <i class="js-open-popup contacts__phone-icon fri-mail-icon" data-popup-name="call-me-back"></i>
+                        <a class="contacts__phone-number" href="tel:84952667756">8(495)266-77-56</a>
                     </div>
+                    <div class="contacts__schedule">Круглосуточно без выходных!<br> Бесплатный курьер по Москве и МО!</div>
                 </div>
             </div>
         </div>
@@ -50,74 +48,66 @@
 
     <!-- Block content -->
     
-    <div class="container">
-        <div class="container_1200px">
-            <div class="feedback">
-                <div class="feedback__titles">
-                    <h1 class="feedback__h1 margin_zero">Хотите продать ноутбук или компьютер?</h1>
-                    <h2 class="feedback__h2 margin_zero">Оценим и купим в любом состоянии!</h2>
+    <div class="section-feedback">
+        <div class="container section-feedback__container">
+            <h1 class="section-feedback__title">Хотите продать ноутбук или компьютер?</h1>
+            <h2 class="section-feedback__subtitle">Оценим и купим в любом состоянии!</h2>
+            <div class="feedback-grid">
+                <div class="feedback-grid__item-image">
+                    <img class="feedback-grid__image" src="images/background/notebook.jpg" alt="">
                 </div>
-                <div class="feedback-grid">
-                    <div class="feedback__image">
-                        <img src="images/background/notebook.jpg" alt="">
+                <form class="feedback-grid__form feedback-form">
+                    <p class="feedback-form__title">Онлайн оценка <br>за 15 минут</p>
+                    <div class="feedback-form__line">
+                        <input class="js-input-mask feedback-form__input" name="phone" type="text" placeholder="+7 (___) ___-__-__">
+                        <p class="feedback-form__warning">Обязательное поле</p>
                     </div>
-                    <form action="/mail.php" method="POST" class="feedback-form">
-                        <div class="feedback-form__title">Онлайн оценка <br>за 15 минут</div>
-                        <input name="phone" class="js-input-mask feedback-form__input" type="text" placeholder="+7 (___) ___-__-__">
-                        <textarea name="text" class="feedback-form__textarea" name="" id="" cols="30" rows="10"
-                                  placeholder="Модель, характеристики, состояние..."></textarea>
-                        <button href="" class="button button-red feedback-form__button">Оценить сейчас</button>
-                    </form>
-                    <div class="feedback__image">
-                        <img src="images/background/money.jpg" alt="">
+                    <div class="feedback-form__line">
+                        <textarea class="feedback-form__textarea" name="text" placeholder="Модель, характеристики, состояние..."></textarea>
                     </div>
+                    <button class="feedback-form__button button">Оценить сейчас</button>
+                </form>
+                <div class="feedback-grid__item-image">
+                    <img class="feedback-grid__image" src="images/background/money.jpg" alt="">
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="content content__background">
+    <div class="content">
         <div class="container">
-            <div class="content__title">
-                Почему выбирают нас
-            </div>
-            <div class="why-we">
+            <div class="content__title">Почему выбирают нас</div>
+            <div class="content__section why-we">
                 <div class="why-we__item">
-                    <div class="why-we-item__icon">
-                        <i class="fri-fast-icon fri-fast-icon_50px"></i>
+                    <div class="why-we__icon">
+                        <i class="fri-fast-icon"></i>
                     </div>
-                    <div class="why-we-item__text">
-                        <h3 class="why-we-item__title">У нас быстрее всех + Бесплатный курьер!</h3>
-                        <div class="why-we-item__description">Курьер приедет бесплатно в любое время суток, оценит ваше устройство и выдаст деньги СРАЗУ! Также Вы можете воспользоваться формой онлайн-оценки и заранее узнать стоимость своего ноутбука.                        </div>
+                    <div class="why-we__text">
+                        <div class="why-we__title">У нас быстрее всех + Бесплатный курьер!</div>
+                        <div class="why-we__description">Курьер приедет бесплатно в любое время суток, оценит ваше устройство и выдаст деньги СРАЗУ! Также Вы можете воспользоваться формой онлайн-оценки и заранее узнать стоимость своего ноутбука.</div>
                     </div>
                 </div>
                 <div class="why-we__item">
-                    <div class="why-we-item__icon">
-                        <i class="fri-profit-icon fri-profit-icon_50px"></i>
+                    <div class="why-we__icon">
+                        <i class="fri-profit-icon"></i>
                     </div>
-                    <div class="why-we-item__text">
-                        <h3 class="why-we-item__title">Продать нам быстро и выгодно!</h3>
-                        <div class="why-we-item__description">Продавать технику самостоятельно долго, зачастую это занимает больше месяца и не оправдывает Ваших финансовых ожиданий. Позвоните - и Вы получите желаемую сумму в течение часа с момента обращения!
-                        </div>
+                    <div class="why-we__text">
+                        <div class="why-we__title">Продать нам быстро и выгодно!</div>
+                        <div class="why-we__description">Продавать технику самостоятельно долго, зачастую это занимает больше месяца и не оправдывает Ваших финансовых ожиданий. Позвоните - и Вы получите желаемую сумму в течение часа с момента обращения!</div>
                     </div>
                 </div>
                 <div class="why-we__item">
-                    <div class="why-we-item__icon">
-                        <i class="fri-fair-icon fri-fair-icon_50px"></i>
+                    <div class="why-we__icon">
+                        <i class="fri-fair-icon"></i>
                     </div>
-                    <div class="why-we-item__text">
-                        <h3 class="why-we-item__title">Продать нам быстро и выгодно!</h3>
-                        <div class="why-we-item__description">Курьер приедет бесплатно в любое время суток, оценит ваше
-                            устройство и выдаст деньги СРАЗУ! Также Вы можете воспользоваться формой онлайн-оценки и
-                            заранее узнать стоимость своего ноутбука.
-                        </div>
+                    <div class="why-we__text">
+                        <div class="why-we__title">Честный сервис, максимальная оценка!</div>
+                        <div class="why-we__description">Мы готовы предложить Вам 90% от рыночной стоимости. Мы НЕ «впариваем» Вам Б/У ноутбуки взамен ваших и не предлагаем обмен. Только наличные! Мы НЕ обманываем Вас завышенной оценкой, как это делают конкуренты, чтобы заманить Вас в офис!</div>
                     </div>
                 </div>
             </div>
-            <div class="content__title">
-                Продать нам выгодней
-            </div>
-            <div class="content__text">
+            <div class="content__title">Продать нам выгодней</div>
+            <div class="content__section content-text">
                 <p>Не знаете куда продать ноутбук в Москве? Мы выкупим ваш ноутбук по самой выгодной цене!</p>
                 <p>Если у Вас морально устаревший ноутбук или планшет который никому уже не нужен и который никто не
                     купит даже за сто рублей — продайте его нам, мы постараемся дать за него максимальную сумму.</p>
@@ -128,44 +118,59 @@
                     самые навороченные модели.</p>
             </div>
             <div class="content__title">Схему проезда вы можете увидеть ниже</div>
-            <div class="content-map">
-
+            <div class="content__map content-map">
                 <iframe class="content-map__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2246.376445312138!2d37.563575316185776!3d55.734587980548525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54bbdf5838719%3A0x96a1ef43119d5a59!2z0KHQsNCy0LLQuNC90YHQutCw0Y8g0L3QsNCxLiwgMTcsINCc0L7RgdC60LLQsCwg0KDQvtGB0YHQuNGPLCAxMTk0MzU!5e0!3m2!1sru!2skz!4v1486546824858" frameborder="0" allowfullscreen></iframe>
-                    <div class="content-map__text">
-                    <p class="content-map__description_red margin_zero">В связи с переездом, подъехать к нам в офис Вы можете только по предварительному звонку!</p>
-                    <p class="content-map__description margin_zero">Мы рекомендуем Вам воспользоваться бесплатной услугой вызова курьера!</p>
-                    <a class="js-open-popup button button-red content__button" data-popup-name="call-me-back-courier">Вызвать курьера</a>
-                    <p class="content-map__call-us margin_zero">А также Вы можете позвонить нам круглосуточно:</p>
-                    <a class="content-map__phone" href="tel:84952667754">8 (495)266-77-54</a>
+                <div class="content-map__text">
+                    <p class="content-map__descr content-map__descr_red">В связи с переездом, подъехать к нам в офис Вы можете только по предварительному звонку!</p>
+                    <p class="content-map__descr">Мы рекомендуем Вам воспользоваться бесплатной услугой вызова курьера!</p>
+                    <p class="content-map__button-wrap">
+                        <span class="js-open-popup button" data-popup-name="call-me-back">Вызвать курьера</span>
+
+                    </p>
+                    <p class="content-map__call-us ">А также Вы можете позвонить нам круглосуточно:</p>
+                    <p><a class="content-map__phone" href="tel:84952667754">8 (495)266-77-55</a></p>
                 </div>
             </div>
         </div>
     </div>
-    <div class="popup__overlay">
-        <div class="popup" data-popup="call-me-back">
-            <form action="/mail.php" method="post" class="popup-wrapper_call-me popup__window">
-                <a class="js-close-popup popup__close"></a>
-                <div class="popup__text">Оставьте свой <strong>телефон</strong> и наш специалист перезвонит Вам в ближайшее время!</div>
-                <input name="phone" class="js-input-mask feedback-form__input_call-me" type="text" placeholder="+7 (___) ___-__-__"></input>
-                <button class="button button-red popup-form__button">Отправить</button>
+    <div class="popup-overlay">
+        <div class="popup popup_call-me " data-popup="call-me-back">
+            <span class="js-close-popup popup__close"></span>
+            <div class="popup__text">Оставьте свой <strong>телефон</strong> и наш специалист перезвонит Вам в ближайшее время!</div>
+            <form class="popup__feedback-form feedback-form">
+                <div class="feedback-form__line">
+                    <input class="js-input-mask feedback-form__input" name="phone" type="text" placeholder="+7 (___) ___-__-__">
+                    <p class="feedback-form__warning">Обязательное поле</p>
+                </div>
+                <p>
+                    <button class="popup__button button">Отправить</button>
+                </p>
             </form>
         </div>
-        <div class="popup" data-popup="call-me-back-courier">
-            <div class="popup-wrapper_call-me popup__window">
-                <a class="js-close-popup popup__close"></a>
-                <div class="popup__text">Оставьте свой <strong>телефон</strong> и наш специалист перезвонит Вам в ближайшее время!</div>
-                <input class="js-input-mask feedback-form__input_call-me" type="text" placeholder="+7 (___) ___-__-__"></input>
-                <button class="button button-red popup-form__button">Отправить</button>
+        <div class="popup popup_corporate" data-popup="corporate">
+            <span class="js-close-popup popup__close"></span>
+            <div class="popup__text"><strong>Мы покупаем компьютерную технику у фирм в любом количестве.</strong> Наличный и безналичный расчет. Бесплатный выезд оценщика. Оставьте Ваш телефон ниже или просто позвоните нам.</div>
+            <form class="popup__feedback-form feedback-form">
+                <div class="feedback-form__line">
+                    <input class="js-input-mask feedback-form__input" name="phone" type="text" placeholder="+7 (___) ___-__-__">
+                    <p class="feedback-form__warning">Обязательное поле</p>
+                </div>
+                <p>
+                    <button class="popup__button button">Отправить</button>
+                </p>
+            </form>
+        </div>
+
+
+        <div class="popup popup_successfully" data-popup="successfully">
+            <span class="js-close-popup popup__close"></span>
+            <div class="popup__text">
+                <p><strong>Ваша заявка успешно отправлена!</strong> </p>
+                <p>Мы свяжемся с Вами в ближайшее время</p>
             </div>
         </div>
-        <div class="popup" data-popup="corporate">
-            <div class="popup-wrapper_corporate popup__window">
-                <a class="js-close-popup popup__close"></a>
-                <div class="popup__text"><strong>Мы покупаем компьютерную технику у фирм в любом количестве.</strong> Наличный и безналичный расчет. Бесплатный выезд оценщика. Оставьте Ваш телефон ниже или просто позвоните нам.</div>
-                <input class="js-input-mask feedback-form__input_corporate" type="text" placeholder="+7 (___) ___-__-__"></input>
-                <button class="button button-red popup-form__button">Отправить</button>
-            </div>
-        </div>
+
+
     </div>
 
     <!--Block content end -->
@@ -175,27 +180,24 @@
     <div class="container">
         <div class="header-grid">
             <div class="header-grid__item header-grid__item_first">
-                <div class="logo logo__item">
-                    <p class="logo__title margin_zero">ООО «Скупка Ноутбуков»</p>
-                    <div class="logo__description">Оценка и скупка любых ноутбуков, планшетов, моноблоков в Москве и Московской области</div>
-                </div>
-            </div>
-            <div class="header-grid__item header-grid__item_middle header-grid__item_last">
-                <div class="callback callback_text-center">
-                    <span class="js-open-popup button button-red callback__button" data-popup-name="call-me-back">Перезвоните мне</span>
-                    <a class="js-open-popup callback__link" data-popup-name="corporate">Корпоративным клиентам</a>
+                <div class="logo">
+                    <p class="logo__title">ООО «Скупка Ноутбуков»</p>
+                    <p class="logo__description">Оценка и скупка любых ноутбуков, планшетов, моноблоков в Москве и Московской области</p>
                 </div>
             </div>
             <div class="header-grid__item header-grid__item_second">
-                <div class="header-contacts">
-                    <a class="header-contacts__phone-link" href="tel:84952667755">
-                        <i class="fri-mail-icon header-contacts__icon header-contacts__icon_25px"></i>
-                        <div class="header-contacts__phone-number">8(495)266-77-55</div>
-                    </a>
-                    <div class="header-contacts__work-schedule">
-                        <div class="header-contacts__day-and-night">Круглосуточно без выходных!</div>
-                        <div class="header-contacts__courier">Бесплатный курьер по Москве и МО!</div>
+                <div class="callback">
+                    <p class="callback_btn-wrap"><span class="js-open-popup button" data-popup-name="call-me-back">Перезвоните мне</span></p>
+                    <p class="js-open-popup callback__link" data-popup-name="corporate">Корпоративным клиентам</p>
+                </div>
+            </div>
+            <div class="header-grid__item header-grid__item_third">
+                <div class="contacts">
+                    <div class="contacts__phone">
+                        <i class="js-open-popup contacts__phone-icon fri-mail-icon" data-popup-name="call-me-back"></i>
+                        <a class="contacts__phone-number" href="tel:84952667756">8(495)266-77-56</a>
                     </div>
+                    <div class="contacts__schedule">Круглосуточно без выходных!<br>Бесплатный курьер по Москве и МО!</div>
                 </div>
             </div>
         </div>

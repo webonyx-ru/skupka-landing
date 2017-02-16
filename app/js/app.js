@@ -304,7 +304,8 @@
             var that = $(this),
                 form = e.target,
                 serialized = serializeForm(form),
-                url = './mail.php';
+                url = './mail.php',
+                modal = app.modal();
 
             if (serialized.phone !== '') {
                 $.post(url, serialized, function(response) {
@@ -312,8 +313,8 @@
                     if(response === 1) {
                         if(response) {
                             that.find("input[name='phone']").removeClass("error");
-                            app.modal().closeModal();
-                            app.modal().openModal('successfully');
+                            modal.closeModal();
+                            modal.openModal('successfully');
                         }
                     }
                 });
