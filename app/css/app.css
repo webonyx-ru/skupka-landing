@@ -243,11 +243,13 @@ html, body {
   width: 100%;
   color: #000;
   height: 30px;
+  font-size: 14px;
   background-color: #fff;
   border: 1px solid #999;
   padding: 0 10px;
   text-align: left;
   outline: none;
+  font-family: "PT Sans Narrow", arial;
 }
 .feedback-form__input:hover::-moz-placeholder {
   color: #000000;
@@ -260,11 +262,11 @@ html, body {
 }
 .feedback-form__input:focus {
   box-shadow: 0 0 5px 1px #7294CB;
-  border: none;
+  border-color: transparent;
 }
 .feedback-form__input.error {
   box-shadow: 0 0 5px 1px #FF1132;
-  border: none;
+  border-color: transparent;
 }
 .feedback-form__input.error:focus {
   outline: none;
@@ -278,6 +280,7 @@ html, body {
   width: 100%;
   height: 115px;
   max-height: 250px;
+  font-size: 14px;
   padding: 10px;
   font-size: 17px;
   line-height: 1em;
@@ -296,7 +299,7 @@ html, body {
 }
 .feedback-form__textarea:focus {
   box-shadow: 0 0 5px 1px #7294CB;
-  border: none;
+  border-color: transparent;
 }
 
 .feedback-form__button {
