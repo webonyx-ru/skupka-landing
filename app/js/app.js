@@ -300,7 +300,6 @@
 
     app.appLoad('full', function (e) {
         $('form').submit(function (e) {
-            console.log(app.openPopup())
             var that = $(this),
                 form = e.target,
                 serialized = serializeForm(form),
