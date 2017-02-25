@@ -13,6 +13,7 @@
         var _self = this;
 
         _self.maskInit(".js-input-mask");
+        _self.autoSize(".js-auto-size")
 
         _self.modal();
     };
@@ -217,7 +218,7 @@
     };
 
     YOURAPPNAME.prototype.maskInit = function (className) {
-        $(className).mask("+7 (999) 999-99-99");
+        $(className).mask("+7 ( 999 ) 999-99-99");
     };
 
     YOURAPPNAME.prototype.modal = function () {
@@ -282,6 +283,12 @@
 
         return modal;
     };
+
+    YOURAPPNAME.prototype.autoSize = function () {
+        autosize(document.querySelectorAll('.feedback-form__textarea'));
+    };
+
+
 
     var app = new YOURAPPNAME(document);
 

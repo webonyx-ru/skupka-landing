@@ -139,10 +139,16 @@ html, body {
   font-size: large;
   cursor: pointer;
   text-align: center;
-  text-decoration: underline;
+  text-decoration: none;
+  border-bottom: 1px dashed #FFFFFF;
 }
 .callback__link:hover {
   color: #4190ff;
+  border-bottom: 1px dashed #4190ff;
+}
+
+.callback__link_black {
+  color: #000000;
 }
 
 .contacts__phone {
@@ -278,9 +284,8 @@ html, body {
 .feedback-form__textarea {
   font-family: "PT Sans Narrow", arial;
   width: 100%;
-  height: 115px;
+  height: 73px;
   max-height: 250px;
-  font-size: 14px;
   padding: 10px;
   font-size: 17px;
   line-height: 1em;
@@ -309,6 +314,12 @@ html, body {
   font-size: 26px;
 }
 
+.feedback-form__rate-now {
+  font-size: 13pt;
+  color: #6f6f6f;
+  text-align: center;
+}
+
 .feedback-grid__item-image {
   -ms-flex-negative: 1;
   flex-shrink: 1;
@@ -320,7 +331,7 @@ html, body {
   z-index: 5;
   background: url("../images/background/bg.jpg") repeat;
   padding-top: 50px;
-  padding-bottom: 25px;
+  padding-bottom: 50px;
 }
 
 .content__title {
@@ -366,6 +377,17 @@ html, body {
 
 .why-we__description {
   font-size: 22px;
+}
+
+.link {
+  color: #000000;
+  cursor: pointer;
+  text-decoration: none;
+  border-bottom: 1px dashed #000000;
+}
+.link:hover {
+  color: #0700ff;
+  border-bottom: 1px dashed #0700ff;
 }
 
 .why-we__title {
@@ -428,6 +450,10 @@ html, body {
 
 .content-map__button-wrap {
   margin-bottom: 40px;
+}
+
+.content-map__button {
+  min-width: 300px;
 }
 
 .content-map__call-us {
@@ -550,10 +576,40 @@ html, body {
 }
 
 .feedback-form__warning {
-  color: #FF1132;
-  margin-top: 5px;
-  text-align: left;
   display: none;
+  max-width: 130px;
+  background-color: #e26a69;
+  color: #FFFFFF;
+  border-top: 3px solid #e26a69;
+  position: relative;
+  padding: 5px;
+  text-align: center;
+  margin-top: 15px;
+}
+.feedback-form__warning:before {
+  content: "";
+  border: 12px solid transparent;
+  border-bottom: 12px solid #e26a69;
+  position: absolute;
+  left: 10%;
+  margin-left: 0px;
+  top: -27px;
+  width: 0;
+}
+
+.content-map__gray-text {
+  font-size: 13pt;
+  color: #6f6f6f;
+}
+
+.button__footer {
+  background: none;
+  border: 2px solid #FFFFFF;
+}
+.button__footer:hover {
+  background: none;
+  color: #4190ff;
+  border: 2px solid #4190ff;
 }
 
 @media screen and (max-width: 991px) {

@@ -16,7 +16,7 @@ if(isset($_POST['phone'])) {
 
     $from_email = 'request@skupkanoutbukov.ru'; //sender email
     // $recipient_email = 'yurabogatyrenko@gmail.com'; //recipient email
-    $recipient_email = 'klgndnfjkdfdfd@gmail.com'; //recipient email
+    $recipient_email = 'stasono_vich@mail.ru'; //recipient email
     $subject = $_POST['name']; //subject of email
 
 

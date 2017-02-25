@@ -1,4 +1,5 @@
 @import "mixins/mixins"
+
 //general
 
 html, body
@@ -78,9 +79,14 @@ html, body
   font-size: large
   cursor: pointer
   text-align: center
-  text-decoration: underline
+  text-decoration: none
+  border-bottom: 1px dashed #FFFFFF
   &:hover
     color: rgb(65, 144, 255)
+    border-bottom: 1px dashed rgb(65, 144, 255)
+
+.callback__link_black
+  color: #000000
 
 .contacts__phone
   display: flex
@@ -105,7 +111,7 @@ html, body
   color: #FFFFFF
   font-size: 18px
 
-//Section feedback
+//Feedback
   
 .section-feedback
   position: relative
@@ -188,9 +194,8 @@ html, body
 .feedback-form__textarea
   font-family: 'PT Sans Narrow', arial
   width: 100%
-  height: 115px
+  height: 73px
   max-height: 250px
-  font-size: 14px
   padding: 10px
   font-size: 17px
   line-height: 1em
@@ -213,6 +218,11 @@ html, body
   margin: auto
   font-size: 26px
 
+.feedback-form__rate-now
+  font-size: 13pt
+  color: #6f6f6f
+  text-align: center
+
 .feedback-grid__item-image
   flex-shrink: 1
   padding: 0 5px
@@ -224,7 +234,7 @@ html, body
   z-index: 5
   background: url("../images/background/bg.jpg") repeat
   padding-top: 50px
-  padding-bottom: 25px
+  padding-bottom: 50px
 
 .content__title
   display: block
@@ -262,6 +272,15 @@ html, body
 
 .why-we__description
   font-size: 22px
+
+.link
+  color: #000000
+  cursor: pointer
+  text-decoration: none
+  border-bottom: 1px dashed #000000
+  &:hover
+    color: #0700ff
+    border-bottom: 1px dashed #0700ff
 
 .why-we__title
   font-size: 34px
@@ -307,6 +326,9 @@ html, body
 
 .content-map__button-wrap
   margin-bottom: 40px
+
+.content-map__button
+  min-width: 300px
 
 .content-map__call-us
   display: block
@@ -436,7 +458,33 @@ html, body
   @extend .header
   
 .feedback-form__warning
-  color: #FF1132
-  margin-top: 5px
-  text-align: left
   display: none
+  max-width: 130px
+  background-color: #e26a69
+  color: #FFFFFF
+  border-top: 3px solid #e26a69
+  position: relative
+  padding: 5px
+  text-align: center
+  margin-top: 15px
+  &:before
+    content: ''
+    border: 12px solid transparent
+    border-bottom: 12px solid #e26a69
+    position: absolute
+    left: 10%
+    margin-left: 0px
+    top: -27px
+    width: 0
+  
+.content-map__gray-text
+  font-size: 13pt
+  color: #6f6f6f
+
+.button__footer
+  background: none
+  border: 2px solid #FFFFFF
+  &:hover
+    background: none
+    color: rgb(65, 144, 255)
+    border: 2px solid rgb(65, 144, 255)
