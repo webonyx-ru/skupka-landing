@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&subset=cyrillic,cyrillic-ext,latin-ext");
+@import url(../css/fonts.css);
 .mb10 {
   margin-bottom: 10px;
 }
@@ -756,9 +756,9 @@ html, body {
   }
 
   .feedback-form {
-    width: 100%;
     -ms-flex-negative: 1;
     flex-shrink: 1;
+    width: 100%;
   }
 
   .feedback-form__title {

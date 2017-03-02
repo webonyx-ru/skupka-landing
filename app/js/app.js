@@ -218,7 +218,7 @@
     };
 
     YOURAPPNAME.prototype.maskInit = function (className) {
-        $(className).inputmask("+7 ( 999 ) 999-99-99[99]");
+        $(className).inputmask("+7 ( 999 ) 999-99-9[999]");
     };
 
     YOURAPPNAME.prototype.modal = function () {
@@ -311,17 +311,16 @@
                 form = e.target,
                 serialized = serializeForm(form),
                 url = './mail.php',
-                modal = app.modal();
+                modal = app.modal(),
+                inputLength = serialized.phone.length;
 
-            if (serialized.phone !== '') {
+            if ((serialized.phone !== '') && (inputLength >= 20 ) ) {
                 $.post(url, serialized, function(response) {
-                    console.log(response);
-                    if(response === 1) {
-                        if(response) {
-                            that.find("input[name='phone']").removeClass("error");
-                            modal.closeModal();
-                            modal.openModal('successfully');
-                        }
+                    // console.log(response);
+                    if(response) {
+                        that.find("input[name='phone']").removeClass("error");
+                        modal.closeModal();
+                        modal.openModal('successfully');
                     }
                 });
             } else {
