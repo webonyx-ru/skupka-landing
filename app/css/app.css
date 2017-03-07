@@ -1,4 +1,17 @@
-@import url(../css/fonts.css);
+@font-face {
+  font-family: "PT Sans Narrow";
+  src: url("../fonts/PTSans-Narrow.eot");
+  src: url("../fonts/PTSans-Narrow.eot?#iefix") format("embedded-opentype"), url("../fonts/PTSans-Narrow.woff") format("woff"), url("../fonts/PTSans-Narrow.ttf") format("truetype"), url("../fonts/PTSans-Narrow.svg#PT+Sans+Narrow") format("svg");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "PT Sans Narrow";
+  src: url("../fonts/PTSans-NarrowBold.eot");
+  src: url("../fonts/PTSans-NarrowBold.eot?#iefix") format("embedded-opentype"), url("../fonts/PTSans-NarrowBold.woff") format("woff"), url("../fonts/PTSans-NarrowBold.ttf") format("truetype"), url("../fonts/PTSans-NarrowBold.svg#PT+Sans+Narrow") format("svg");
+  font-style: normal;
+  font-weight: bold;
+}
 .mb10 {
   margin-bottom: 10px;
 }
@@ -183,6 +196,10 @@ html, body {
   font-size: 18px;
 }
 
+.contacts__courier {
+  font-size: 21px;
+}
+
 .section-feedback {
   position: relative;
   padding: 10px 0 30px;
@@ -278,7 +295,7 @@ html, body {
   outline: none;
 }
 .feedback-form__input.error + .feedback-form__warning {
-  display: block;
+  display: inline-block;
 }
 
 .feedback-form__textarea {
@@ -318,6 +335,7 @@ html, body {
   font-size: 13pt;
   color: #6f6f6f;
   text-align: center;
+  padding-top: 10px;
 }
 
 .feedback-grid__item-image {
@@ -577,7 +595,6 @@ html, body {
 
 .feedback-form__warning {
   display: none;
-  max-width: 130px;
   background-color: #e26a69;
   color: #FFFFFF;
   border-top: 3px solid #e26a69;
@@ -732,6 +749,11 @@ html, body {
   .header-grid__item_third {
     -ms-flex-order: 3;
     order: 3;
+  }
+
+  .contacts__phone {
+    -ms-flex-pack: center;
+    justify-content: center;
   }
 
   .contacts__phone-icon {

@@ -218,7 +218,7 @@
     };
 
     YOURAPPNAME.prototype.maskInit = function (className) {
-        $(className).inputmask("+7 ( 999 ) 999-99-9[999]");
+        $(className).inputmask("+9 ( 999 ) 999-99-99[99]");
     };
 
     YOURAPPNAME.prototype.modal = function () {
