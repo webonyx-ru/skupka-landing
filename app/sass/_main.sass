@@ -34,8 +34,16 @@ html, body
   cursor: pointer
   text-align: center
   outline: none
+  +transition(all 0.3s ease)
   &:hover
-    background: #FF1132
+    background: #FF3954*0.7
+
+.header
+  .button
+    &:hover
+      background: transparent
+      box-shadow: 0 0 0 2px #fff inset
+      color: #fff
 
 .popup__button
   font-size: 18px
@@ -182,12 +190,12 @@ html, body
     color: #000000
   &:hover::-webkit-input-placeholder
     color: #000000
-  &:focus
+  &:focus, &:active
     box-shadow: 0 0 5px 1px #7294CB
-    border-color: transparent
+    border: 1px solid #7294CB
   &.error
     box-shadow: 0 0 5px 1px #FF1132
-    border-color: transparent
+    border: 1px solid #FF1132
     &:focus
       outline: none
     & + .feedback-form__warning
@@ -213,7 +221,7 @@ html, body
     color: #000000
   &:focus
     box-shadow: 0 0 5px 1px #7294CB
-    border-color: transparent
+    border-color: #7294CB
 
 .feedback-form__button
   width: 100%
@@ -492,3 +500,4 @@ html, body
     background: none
     color: rgb(65, 144, 255)
     border: 2px solid rgb(65, 144, 255)
+    box-shadow: none

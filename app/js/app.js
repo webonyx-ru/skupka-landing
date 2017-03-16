@@ -314,13 +314,21 @@
                 modal = app.modal(),
                 inputLength = serialized.phone.length;
 
-            if ((serialized.phone !== '') && (inputLength >= 20 ) ) {
+            if ((serialized.phone.length > 7) && (inputLength >= 20 ) ) {
                 $.post(url, serialized, function(response) {
                     // console.log(response);
                     if(response) {
                         that.find("input[name='phone']").removeClass("error");
                         modal.closeModal();
                         modal.openModal('successfully');
+
+                        window.dataLayer = window.dataLayer || [];
+                        dataLayer.push({
+                            'EventCategory': 'form',
+                            'EventAction': 'conversion',
+                            'EventLabel': 'inline',
+                            'event': 'UAevent'
+                        });
                     }
                 });
             } else {

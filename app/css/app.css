@@ -96,9 +96,16 @@ html, body {
   cursor: pointer;
   text-align: center;
   outline: none;
+  transition: all 0.3s ease;
 }
 .button:hover {
-  background: #FF1132;
+  background: #b3283b;
+}
+
+.header .button:hover, .footer .button:hover {
+  background: transparent;
+  box-shadow: 0 0 0 2px #fff inset;
+  color: #fff;
 }
 
 .popup__button {
@@ -283,13 +290,13 @@ html, body {
 .feedback-form__input:hover::-webkit-input-placeholder {
   color: #000000;
 }
-.feedback-form__input:focus {
+.feedback-form__input:focus, .feedback-form__input:active {
   box-shadow: 0 0 5px 1px #7294CB;
-  border-color: transparent;
+  border: 1px solid #7294CB;
 }
 .feedback-form__input.error {
   box-shadow: 0 0 5px 1px #FF1132;
-  border-color: transparent;
+  border: 1px solid #FF1132;
 }
 .feedback-form__input.error:focus {
   outline: none;
@@ -321,7 +328,7 @@ html, body {
 }
 .feedback-form__textarea:focus {
   box-shadow: 0 0 5px 1px #7294CB;
-  border-color: transparent;
+  border-color: #7294CB;
 }
 
 .feedback-form__button {
@@ -627,6 +634,7 @@ html, body {
   background: none;
   color: #4190ff;
   border: 2px solid #4190ff;
+  box-shadow: none;
 }
 
 @media screen and (max-width: 991px) {
