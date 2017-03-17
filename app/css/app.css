@@ -102,12 +102,6 @@ html, body {
   background: #b3283b;
 }
 
-.header .button:hover, .footer .button:hover {
-  background: transparent;
-  box-shadow: 0 0 0 2px #fff inset;
-  color: #fff;
-}
-
 .popup__button {
   font-size: 18px;
 }
