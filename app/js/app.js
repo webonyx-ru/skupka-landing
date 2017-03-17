@@ -305,6 +305,25 @@
         app.initSwitcher(); // data-switcher="{target='anything'}" , data-switcher-target="anything"
     });
 
+    $('form').each(function () {
+        var phoneInput = $(this).find('input[name="phone"]');
+        phoneInput.on('keyup', function () {
+            var $that = $(this);
+            var phone = $that.val().replace(/_/g, '');
+            phone = phone.replace(/\s/g, '');
+            phone = phone.replace(/\(/g, '');
+            phone = phone.replace(/\)/g, '');
+            phone = phone.replace(/-/g, '');
+            phone = phone.replace(/\+/g, '');
+            console.log(phone)
+            if(phone.length < 8) {
+                $that.addClass('error');
+            } else {
+                $that.removeClass('error');
+            }
+        });
+    });
+
     app.appLoad('full', function (e) {
         $('form').submit(function (e) {
             var that = $(this),
@@ -337,6 +356,8 @@
 
             return false;
         });
+
+
 
         function serializeForm($form) {
             var returnObject = {},
