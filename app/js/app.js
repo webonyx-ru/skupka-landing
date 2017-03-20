@@ -318,10 +318,37 @@
 
             return phoneRes;
         }
+
+        $('textarea, input').on('keyup', function (e) {
+            var $this = $(this);
+            if($this.val().length > 0) {
+                $this.addClass('filled');
+                $this.addClass('focus-in');
+            } else {
+                $this.removeClass('filled');
+            }
+        });
+
         $forms.each(function () {
             var phoneInput = $(this).find('input[name="phone"]');
+            phoneInput.on('focusout', function () {
+                var $that = $(this);
+                if(!$that.hasClass('focus-in'))
+                    return;
+                $that.addClass('focus-lost');
+
+                var phone = cleanPhone($that.val());
+
+                if(phone.length < 8) {
+                    $that.addClass('error');
+                } else {
+                    $that.removeClass('error');
+                }
+            });
             phoneInput.on('keyup', function () {
                 var $that = $(this);
+                if(!$that.hasClass('focus-lost'))
+                    return;
 
                 var phone = cleanPhone($that.val());
 
@@ -364,6 +391,10 @@
             }
 
             return false;
+        });
+
+        $('.input-placeholder').click(function () {
+            $(this).siblings('input, textarea').focus();
         });
 
 

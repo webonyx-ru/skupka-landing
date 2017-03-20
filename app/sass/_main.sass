@@ -165,8 +165,26 @@ html, body
 
 .feedback-form__line
   margin-bottom: 20px
+  position: relative
+  display: block
+  text-align: left
+
+.input-placeholder
+  position: absolute
+  top: 0
+  left: 0
+  line-height: 30px
+  width: 100%
+  padding: 0 10px
+  height: 100%
+  box-sizing: border-box
+  //background: #fff
+  +transition(all 0.3s ease)
+  text-align: left
+
 
 .feedback-form__input
+  display: block
   width: 100%
   color: #000
   height: 30px
@@ -177,6 +195,13 @@ html, body
   text-align: left
   outline: none
   font-family: "PT Sans Narrow", arial
+
+  &.filled ~ .input-placeholder
+    +transform(scale(0.8))
+    transform-origin: left top
+    background: transparent
+    top: -20px
+
   &:hover::-moz-placeholder
     color: #000000
   &:hover:-ms-input-placeholder
@@ -186,11 +211,18 @@ html, body
   &:focus, &:active
     box-shadow: 0 0 5px 1px #7294CB
     border: 1px solid #7294CB
+
+    & ~ .input-placeholder
+      +transform(scale(0.8))
+      transform-origin: left top
+      background: transparent
+      top: -20px
   &.error
     box-shadow: 0 0 5px 1px #FF1132
     border: 1px solid #FF1132
     &:focus
       outline: none
+
     & + .feedback-form__warning
       display: inline-block
 
@@ -206,6 +238,13 @@ html, body
   resize: vertical
   border: 1px solid #999
   color: #000
+
+  &.filled ~ .input-placeholder
+    +transform(scale(0.8))
+    transform-origin: left top
+    background: transparent
+    top: -20px
+
   &:hover::-moz-placeholder
     color: #000000
   &:hover:-ms-input-placeholder
@@ -215,6 +254,12 @@ html, body
   &:focus
     box-shadow: 0 0 5px 1px #7294CB
     border-color: #7294CB
+
+    & ~ .input-placeholder
+      +transform(scale(0.8))
+      transform-origin: left top
+      background: transparent
+      top: -20px
 
 .feedback-form__button
   width: 100%
