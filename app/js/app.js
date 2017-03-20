@@ -387,7 +387,7 @@
                     }
                 });
             } else {
-                that.find("input[name='phone']").addClass("error");
+                that.find("input[name='phone']").addClass("error focus-lost");
             }
 
             return false;
