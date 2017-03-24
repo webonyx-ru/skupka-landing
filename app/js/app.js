@@ -345,18 +345,22 @@
                     $that.removeClass('error');
                 }
             });
+
             phoneInput.on('keyup', function () {
                 var $that = $(this);
-                if(!$that.hasClass('focus-lost'))
+                if(!$that.hasClass('focus-lost')) {
                     return;
+                }
 
-                var phone = cleanPhone($that.val());
-
-                if(phone.length < 8) {
+                /*if (phone.length < 8) {
                     $that.addClass('error');
                 } else {
-                    $that.removeClass('error');
-                }
+                    $that.removeClass('error focus-lost');
+                }*/
+
+                // var phone = cleanPhone($that.val());
+
+                $that.removeClass('error focus-lost');
             });
         });
 
