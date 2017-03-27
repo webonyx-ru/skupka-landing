@@ -373,7 +373,7 @@
                 modal = app.modal(),
                 inputLength = serialized.phone.length;
 
-            if ((cleanPhone(serialized.phone).length > 7) && (inputLength >= 20 ) ) {
+            if ((cleanPhone(serialized.phone).length > 7) ) {
                 $.post(url, serialized, function(response) {
                     // console.log(response);
                     if(response) {
