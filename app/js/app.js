@@ -339,7 +339,7 @@
 
                 var phone = cleanPhone($that.val());
 
-                if(phone.length < 8) {
+                if(phone.length < 11) {
                     $that.addClass('error');
                 } else {
                     $that.removeClass('error');
@@ -352,7 +352,7 @@
                     return;
                 }
 
-                /*if (phone.length < 8) {
+                /*if (phone.length < 11) {
                     $that.addClass('error');
                 } else {
                     $that.removeClass('error focus-lost');

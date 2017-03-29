@@ -1,6 +1,6 @@
 <?php
 
-if(isset($_POST['phone'])) {
+if (isset($_POST['phone'])) {
 
     $phone = "Телефон:\r\n" . $_POST['phone'] . "\r\n\r\n";
 
@@ -8,16 +8,16 @@ if(isset($_POST['phone'])) {
 
     $message .= $phone;
 
-    if(isset($_POST['text'])) {
-        $text = "Текст:\r\n" .  $_POST['text'] . "\r\n\r\n";
+    if (isset($_POST['text'])) {
+        $text = "Текст:\r\n" . $_POST['text'] . "\r\n\r\n";
 
         $message .= $text;
     }
 
     $from_email = 'request@skupkanoutbukov.ru'; //sender email
-    // $recipient_email = 'yurabogatyrenko@gmail.com'; //recipient email
-    $recipient_email = 'skupkanoutbukov@yandex.ru, all.whiteshadow@gmail.com'; //recipient email
-    $subject = $_POST['name']; //subject of email
+    $recipient_email = 'yurabogatyrenko@gmail.com'; //recipient email
+//    $recipient_email = 'skupkanoutbukov@yandex.ru, all.whiteshadow@gmail.com'; //recipient email
+    $subject = 'Заявка с сайта -- Скупка ноутбуков'; //subject of email
 
 
     $boundary = md5("sanwebe");
@@ -25,7 +25,8 @@ if(isset($_POST['phone'])) {
 
 //header
     $headers = "MIME-Version: 1.0\r\n";
-    $headers .= "From:".$from_email."\r\n";
+    $headers .= "From: Skupkanoubukov.ru <" . $from_email . ">\r\n";
+
     $headers .= "Content-Type: multipart/mixed; boundary = $boundary\r\n\r\n";
 
 //plain text
@@ -37,7 +38,7 @@ if(isset($_POST['phone'])) {
 
     $sentMail = @mail($recipient_email, $subject, $body, $headers);
 
-    if($sentMail) {
+    if ($sentMail) {
         echo 'true';
     };
 }
