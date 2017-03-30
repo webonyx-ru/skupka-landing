@@ -25,7 +25,7 @@ if (isset($_POST['phone'])) {
 
 //header
     $headers = "MIME-Version: 1.0\r\n";
-    $headers .= "From: Skupkanoubukov.ru <" . $from_email . ">\r\n";
+    $headers .= "From: Skupkanoutbukov.ru <" . $from_email . ">\r\n";
 
     $headers .= "Content-Type: multipart/mixed; boundary = $boundary\r\n\r\n";
 
