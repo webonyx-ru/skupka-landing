@@ -4,9 +4,11 @@ if (isset($_POST['phone'])) {
 
     $phone = "Телефон:\r\n" . $_POST['phone'] . "\r\n\r\n";
 
+    $form = "Форма отправки: \r\n" . $_POST["form-name"] . "\r\n\r\n";
+
     $message = ''; //message body
 
-    $message .= $phone;
+    $message .= $phone.$form;
 
     if (isset($_POST['text'])) {
         $text = "Текст:\r\n" . $_POST['text'] . "\r\n\r\n";
@@ -15,8 +17,8 @@ if (isset($_POST['phone'])) {
     }
 
     $from_email = 'request@skupkanoutbukov.ru'; //sender email
-//    $recipient_email = 'yurabogatyrenko@gmail.com'; //recipient email
-    $recipient_email = 'skupkanoutbukov@yandex.ru, all.whiteshadow@gmail.com'; //recipient email
+    $recipient_email = 'yurabogatyrenko@gmail.com'; //recipient email
+//    $recipient_email = 'skupkanoutbukov@yandex.ru, all.whiteshadow@gmail.com'; //recipient email
     $subject = 'Заявка с сайта -- Скупка ноутбуков'; //subject of email
 
 
