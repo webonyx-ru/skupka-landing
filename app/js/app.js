@@ -306,6 +306,9 @@
     });
 
     app.appLoad('full', function (e) {
+
+        console.log(document.referrer);
+
         $forms = $('form');
 
         function cleanPhone(phone) {
@@ -330,6 +333,8 @@
         });
 
         $forms.each(function () {
+            $(this).append('<input type="hidden" name="referrer_url" value="'+document.referrer+'" />');
+
             var phoneInput = $(this).find('input[name="phone"]');
             phoneInput.on('focusout', function () {
                 var $that = $(this);

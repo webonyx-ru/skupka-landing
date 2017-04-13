@@ -8,13 +8,26 @@ if (isset($_POST['phone'])) {
 
     $message = ''; //message body
 
-    $message .= $phone.$form;
+    $message .= $phone . $form;
 
     if (isset($_POST['text'])) {
         $text = "Текст:\r\n" . $_POST['text'] . "\r\n\r\n";
 
         $message .= $text;
     }
+
+    if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
+        $ip = $_SERVER['HTTP_CLIENT_IP'];
+    } elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+        $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+    } else {
+        $ip = $_SERVER['REMOTE_ADDR'];
+    }
+
+    $message .= "IP клиента:\r\n" . $ip . "\r\n\r\n";
+
+    if($_POST["referrer_url"])
+        $message .= "Реферал:\r\n" . $_POST["referrer_url"] . "\r\n\r\n";
 
     $from_email = 'request@skupkanoutbukov.ru'; //sender email
 //    $recipient_email = 'yurabogatyrenko@gmail.com'; //recipient email
