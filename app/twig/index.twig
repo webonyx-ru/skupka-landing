@@ -102,7 +102,7 @@
                             920-04-62</a></p>
                     <p class="content-map__descr">Заказать курьера по Москве и Московской области:</p>
                     <div class="content-map__button-wrap">
-                        <span class="js-open-popup content-map__button button" data-popup-name="call-me-back">Вызвать курьера бесплатно</span>
+                        <span class="js-open-popup content-map__button button" data-popup-name="call-courier">Вызвать курьера бесплатно</span>
                         <p class="content-map__gray-text">Курьер приедет в течение 3 часов</p>
                     </div>
                     <p class="content-map__call-us ">Остались вопросы? <br>Напишите нам в WhatsApp, Viber или Telegram.</p>
@@ -125,7 +125,26 @@
             <div class="popup__text">Оставьте свой <strong>телефон</strong> и наш специалист перезвонит Вам в ближайшее
                 время!
             </div>
-            <form class="popup__feedback-form feedback-form">
+            <form class="popup__feedback-form feedback-form" data-form="call-me-back">
+                <div class="feedback-form__line">
+                    <input class="js-input-mask feedback-form__input" name="phone" type="text">
+                    <p class="feedback-form__warning">Номер телефона должен состоять из 10 цифр, начиная с кода
+                        оператора</p>
+                    <div class="input-placeholder">Телефон*</div>
+                </div>
+                <p>
+                    <button class="popup__button button">Отправить</button>
+                </p>
+
+                <input type="hidden" name="form-name" value="Заказ звонка">
+            </form>
+        </div>
+        <div class="popup popup_call-me" data-popup="call-courier">
+            <span class="js-close-popup popup__close"></span>
+            <div class="popup__text">Оставьте свой <strong>телефон</strong> и наш специалист перезвонит Вам в ближайшее
+                время!
+            </div>
+            <form class="popup__feedback-form feedback-form" data-form="call-courier">
                 <div class="feedback-form__line">
                     <input class="js-input-mask feedback-form__input" name="phone" type="text">
                     <p class="feedback-form__warning">Номер телефона должен состоять из 10 цифр, начиная с кода
@@ -145,7 +164,7 @@
                 Наличный и безналичный расчет. Бесплатный выезд оценщика. Оставьте Ваш телефон ниже или просто позвоните
                 нам.
             </div>
-            <form class="popup__feedback-form feedback-form">
+            <form class="popup__feedback-form feedback-form" data-form="corporate">
                 <div class="feedback-form__line">
                     <input class="js-input-mask feedback-form__input" name="phone" type="text">
                     <p class="feedback-form__warning">Номер телефона должен состоять из 10 цифр, начиная с кода

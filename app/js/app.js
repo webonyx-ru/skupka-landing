@@ -157,6 +157,32 @@
             plugin.bodyEl.css('overflow-y', 'scroll');
             plugin.topPanelEl.css('padding-right', scrollSettings.width);
             plugin.htmlEl.addClass('popup-opened');
+
+            if(popupName === 'call-me-back') {
+                window.dataLayer = window.dataLayer || [];
+                dataLayer.push({
+                    'EventCategory': 'form',
+                    'EventAction': 'open',
+                    'EventLabel': 'callback',
+                    'event': 'UAevent'
+                });
+            } else if(popupName === 'corporate') {
+                window.dataLayer = window.dataLayer || [];
+                dataLayer.push({
+                    'EventCategory': 'form',
+                    'EventAction': 'open',
+                    'EventLabel': 'zayavka-b2b',
+                    'event': 'UAevent'
+                });
+            } else if(popupName === 'call-courier') {
+                window.dataLayer = window.dataLayer || [];
+                dataLayer.push({
+                    'EventCategory': 'form',
+                    'EventAction': 'open',
+                    'EventLabel': 'zayavka-kuryer',
+                    'event': 'UAevent'
+                });
+            }
         };
 
         plugin.closePopup = function (popupName) {
@@ -386,13 +412,33 @@
                         modal.closeModal();
                         modal.openModal('successfully');
 
-                        window.dataLayer = window.dataLayer || [];
-                        dataLayer.push({
-                            'EventCategory': 'form',
-                            'EventAction': 'conversion',
-                            'EventLabel': 'inline',
-                            'event': 'UAevent'
-                        });
+                        var form_data = form.attr('data-form');
+
+                        if(form_data === 'call-me-back') {
+                            window.dataLayer = window.dataLayer || [];
+                            dataLayer.push({
+                                'EventCategory': 'form',
+                                'EventAction': 'conversion',
+                                'EventLabel': 'callback',
+                                'event': 'UAevent'
+                            });
+                        } else if(form_data === 'corporate') {
+                            window.dataLayer = window.dataLayer || [];
+                            dataLayer.push({
+                                'EventCategory': 'form',
+                                'EventAction': 'conversion',
+                                'EventLabel': 'zayavka-b2b',
+                                'event': 'UAevent'
+                            });
+                        } else {
+                            window.dataLayer = window.dataLayer || [];
+                            dataLayer.push({
+                                'EventCategory': 'form',
+                                'EventAction': 'conversion',
+                                'EventLabel': 'inline',
+                                'event': 'UAevent'
+                            });
+                        }
                     }
                 });
             } else {
