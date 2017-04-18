@@ -557,11 +557,21 @@ html, body {
 }
 
 .content-map__phone {
-  display: block;
   font-weight: 900;
+  display: inline-block;
+  vertical-align: middle;
   text-decoration: none;
   color: #000000;
   font-size: 32px;
+}
+
+.dib {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.mr10 {
+  margin-right: 10px;
 }
 
 .popup {
